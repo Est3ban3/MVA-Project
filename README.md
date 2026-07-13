@@ -40,3 +40,16 @@ The files listed below each name are the samples that person will be working wit
 - In data folders, these are ROOT files (for example diboson.root, singleH.root, ttbar.root).
 - ROOT datasets are large binary inputs and are ignored by Git to keep the repository lightweight.
 
+## Cuts Needed
+
+### 1 Lepton 2 Taus
+
+- n_b_jet == 0
+- n_jet >= 2
+
+### 2 Lepton 2 Taus
+
+- n_b_jet == 0
+- 21_charge * 12_charge < 0 or 21_charge != 12_charge
+- mZ_cut > 0
+
