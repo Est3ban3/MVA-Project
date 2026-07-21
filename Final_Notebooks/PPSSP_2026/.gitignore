@@ -1,0 +1,4 @@
+# Ignore the large ROOT data/split files but keep plots and other artifacts
+# (summary_plots/, plots/, *.png, *.json, *.csv) tracked in git.
+*.root
+*.root:Zone.Identifier
