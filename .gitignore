@@ -1,10 +1,11 @@
-/PPSSP_2026/
-/Evie/PPSSP_2026/
-/Esteban/PPSSP_2026/
 /venv
 /Esteban/plots_run3_1l2tau
 /Esteban/plots_run2_2l2tau
 /Esteban/plots_run3_2l2tau
 /Esteban/plots_run2_1l2tau
 PPSSP_2026.zip
-/Final_Notebooks/PPSSP_2026
+
+# Large ROOT ntuples/splits are ignored via per-folder .gitignore files inside
+# each PPSSP_2026/ tree (see /PPSSP_2026/.gitignore, /Evie/PPSSP_2026/.gitignore,
+# /Esteban/PPSSP_2026/.gitignore, /Final_Notebooks/PPSSP_2026/.gitignore) so
+# that plots/summary artifacts under those same trees stay tracked.
