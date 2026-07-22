@@ -1,0 +1,2 @@
+channel,model,track,val_auc,test_auc
+1l2tau,pnn,Run 2,0.94178796676159,0.9462814039561678
