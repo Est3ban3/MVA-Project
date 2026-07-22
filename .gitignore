@@ -9,3 +9,13 @@ PPSSP_2026.zip
 # each PPSSP_2026/ tree (see /PPSSP_2026/.gitignore, /Evie/PPSSP_2026/.gitignore,
 # /Esteban/PPSSP_2026/.gitignore, /Final_Notebooks/PPSSP_2026/.gitignore) so
 # that plots/summary artifacts under those same trees stay tracked.
+
+# Trained XGBoost model dumps (final_model_run2/run3/combined.json) - fully
+# regenerable by re-running the relevant *_Master_Pipeline.ipynb (deterministic,
+# seeded), but each retrain is a multi-MB non-delta-compressible JSON blob that
+# was previously committed on every run and dominated the repo's git history
+# size (~169MB / 61% of all history as of 2026-07-22). Kept on disk (still
+# loaded by DNN.ipynb/DNN_2l2tau.ipynb/MLP.ipynb/MLP_2l2tau.ipynb) but no longer
+# tracked - re-run the owning master pipeline notebook once after a fresh clone
+# if these are missing.
+final_model_*.json
