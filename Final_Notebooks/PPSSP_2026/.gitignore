@@ -1,4 +1,5 @@
 # Ignore the large ROOT data/split files but keep plots and other artifacts
-# (summary_plots/, plots/, *.png, *.json, *.csv) tracked in git.
+# (summary_plots/, plots/, *.png, *.csv) tracked in git. (*.json/*.pt model
+# artifacts are ignored globally - see the root .gitignore.)
 *.root
 *.root:Zone.Identifier
