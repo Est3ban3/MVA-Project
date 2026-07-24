@@ -1,2 +1,2 @@
 channel,model,track,val_auc,test_auc
-2l2tau,pnn,Channel-Combined (Run2+Run3),0.9618276625298224,0.9651999414348889
+2l2tau,pnn,Channel-Combined (Run2+Run3),0.9588744529934226,0.9625694382148248
