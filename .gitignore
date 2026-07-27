@@ -4,6 +4,7 @@
 /Esteban/plots_run3_2l2tau
 /Esteban/plots_run2_1l2tau
 PPSSP_2026.zip
+CLAUDE.md
 
 # Large ROOT ntuples/splits are ignored via per-folder .gitignore files inside
 # each PPSSP_2026/ tree (see /PPSSP_2026/.gitignore, /Evie/PPSSP_2026/.gitignore,
@@ -20,6 +21,15 @@ PPSSP_2026.zip
 # notebook once after a fresh clone if these are missing.
 *.json
 *.pt
+
+# Preprocessing state (preprocess_{track}[_dnn|_mlp|_gnn].pkl: the per-track
+# StandardScaler + train medians). Same class as *.pt/*.json above - written by
+# save_track_artifacts_nn/_gnn and regenerable by re-running the owning
+# notebook. Small individually (~6KB, 18 files as of 2026-07-27), but they are
+# rewritten on every run and there is one per model family per track, so they
+# churn the history for no review value; nothing in the repo reads a committed
+# .pkl, only the ones the run itself just produced.
+*.pkl
 
 # Per-event OOF score dumps (one row per event across all folds) - these are
 # the biggest offenders (41-122MB each, 4 of them tracked as of 2026-07-23),
