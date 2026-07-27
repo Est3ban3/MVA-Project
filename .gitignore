@@ -5,6 +5,7 @@
 /Esteban/plots_run2_1l2tau
 PPSSP_2026.zip
 CLAUDE.md
+TREXFitter_package.zip
 
 # Large ROOT ntuples/splits are ignored via per-folder .gitignore files inside
 # each PPSSP_2026/ tree (see /PPSSP_2026/.gitignore, /Evie/PPSSP_2026/.gitignore,
