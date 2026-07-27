@@ -1,0 +1,370 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.834205670996407
+      Error: 0.04998383962856027
+    - Sample: HHVBF
+      Yield: 0.022052692885329756
+      Error: 0.001123356542263482
+    - Sample: t
+      Yield: 156.23099149924556
+      Error: 6.11657466305599
+    - Sample: Othertop
+      Yield: 19.199613663681273
+      Error: 0.7309710050676217
+    - Sample: Single-H
+      Yield: 15.434496015887856
+      Error: 0.5900056583822756
+    - Sample: VV
+      Yield: 183.04149482313005
+      Error: 7.210699729957229
+    - Sample: VVV
+      Yield: 0.9775003560386231
+      Error: 0.03815710445579141
+    - Sample: V
+      Yield: 15.448384525957948
+      Error: 0.598950979756475
+    - Sample: W+jets
+      Yield: 153.79650152755752
+      Error: 6.89978212218337
+    - Sample: Z+jets
+      Yield: 133.9756759598276
+      Error: 5.476535936150341
+    - Sample: Total
+      Yield: 678.9609167352082
+      Error: 27.081959284675012
+    - Data: data
+      Yield: 586
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.0386818453325661
+      Error: 0.0017435765727125418
+    - Sample: HHVBF
+      Yield: 0.0023693217657885153
+      Error: 0.00011295211995913902
+    - Sample: t
+      Yield: 190.88811321863884
+      Error: 8.468076051687762
+    - Sample: Othertop
+      Yield: 24.944389427653782
+      Error: 1.1998965847277425
+    - Sample: Single-H
+      Yield: 8.187381435771291
+      Error: 0.4162686685596191
+    - Sample: VV
+      Yield: 115.32338344191515
+      Error: 5.069948897094465
+    - Sample: VVV
+      Yield: 0.4238873215315203
+      Error: 0.018813066345920445
+    - Sample: V
+      Yield: 54.87812145580853
+      Error: 3.1905897993708776
+    - Sample: W+jets
+      Yield: 1308.8674780208073
+      Error: 99.1242382325008
+    - Sample: Z+jets
+      Yield: 477.99656851928256
+      Error: 30.129990510507493
+    - Sample: Total
+      Yield: 2181.5503740085073
+      Error: 143.07937311320975
+    - Data: data
+      Yield: 1847
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8312347113955686
+      Error: 0.06537759253439833
+    - Sample: HHVBF
+      Yield: 0.02213927217407537
+      Error: 0.0012283790818528916
+    - Sample: t
+      Yield: 159.15554152197618
+      Error: 5.960741529306128
+    - Sample: Othertop
+      Yield: 19.1634009139861
+      Error: 0.6926942875470342
+    - Sample: Single-H
+      Yield: 15.77958082972919
+      Error: 0.5768385111656104
+    - Sample: VV
+      Yield: 197.44142210082697
+      Error: 7.316827918104863
+    - Sample: VVV
+      Yield: 1.0424022275746299
+      Error: 0.039541653975032516
+    - Sample: V
+      Yield: 19.051605566437594
+      Error: 0.8099483152713606
+    - Sample: W+jets
+      Yield: 147.55147282609624
+      Error: 5.762971181481711
+    - Sample: Z+jets
+      Yield: 133.3365117007645
+      Error: 5.117981578891524
+    - Sample: Total
+      Yield: 693.3753116709611
+      Error: 25.81795732075728
+    - Data: data
+      Yield: 543
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.04165280493339936
+      Error: 0.0016683365376715374
+    - Sample: HHVBF
+      Yield: 0.0022827424770428995
+      Error: 0.00010236988620011075
+    - Sample: t
+      Yield: 187.96356319590816
+      Error: 7.697387154112892
+    - Sample: Othertop
+      Yield: 24.980602177348956
+      Error: 1.137984202737886
+    - Sample: Single-H
+      Yield: 7.842296621929961
+      Error: 0.38376178662767424
+    - Sample: VV
+      Yield: 100.92345616421802
+      Error: 4.300622115041345
+    - Sample: VVV
+      Yield: 0.35898544999551385
+      Error: 0.014527094616687988
+    - Sample: V
+      Yield: 51.274900415328865
+      Error: 3.005088610434809
+    - Sample: W+jets
+      Yield: 1315.112506722268
+      Error: 99.33598961702816
+    - Sample: Z+jets
+      Yield: 478.63573277834615
+      Error: 30.67219141461384
+    - Sample: Total
+      Yield: 2167.1359790727543
+      Error: 143.3128487224695
+    - Data: data
+      Yield: 1890
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8328932427175886
+      Error: 0.0816862808255328
+    - Sample: HHVBF
+      Yield: 0.021854552001536173
+      Error: 0.0014685849695741252
+    - Sample: t
+      Yield: 161.66155800258207
+      Error: 5.515149240628297
+    - Sample: Othertop
+      Yield: 21.04662982262478
+      Error: 0.7003409716050927
+    - Sample: Single-H
+      Yield: 15.430922703391621
+      Error: 0.6050193136402066
+    - Sample: VV
+      Yield: 196.28433581629636
+      Error: 6.813626815201373
+    - Sample: VVV
+      Yield: 1.0336875036450242
+      Error: 0.037374829115217084
+    - Sample: V
+      Yield: 16.336904590138165
+      Error: 0.6477610137435085
+    - Sample: W+jets
+      Yield: 166.70095915545286
+      Error: 6.547405276212947
+    - Sample: Z+jets
+      Yield: 143.6451547447624
+      Error: 4.756555616856118
+    - Sample: Total
+      Yield: 722.9949001336124
+      Error: 24.894314003254223
+    - Data: data
+      Yield: 560
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.03999427361137993
+      Error: 0.0018009330867520535
+    - Sample: HHVBF
+      Yield: 0.002567462649582101
+      Error: 0.00012166889020967132
+    - Sample: t
+      Yield: 185.45754671530233
+      Error: 8.492569049251308
+    - Sample: Othertop
+      Yield: 23.097373268710278
+      Error: 1.2234573667819908
+    - Sample: Single-H
+      Yield: 8.190954748267526
+      Error: 0.4275972009237921
+    - Sample: VV
+      Yield: 102.08054244874857
+      Error: 4.604717135581101
+    - Sample: VVV
+      Yield: 0.3677001739251193
+      Error: 0.01626206273780683
+    - Sample: V
+      Yield: 53.9896013916283
+      Error: 2.8105393927066507
+    - Sample: W+jets
+      Yield: 1295.9630203929116
+      Error: 103.21152747384154
+    - Sample: Z+jets
+      Yield: 468.32708973434796
+      Error: 27.046488218119542
+    - Sample: Total
+      Yield: 2137.5163906101025
+      Error: 143.47617453596004
+    - Data: data
+      Yield: 1873
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8307552792289898
+      Error: 0.03500727499960323
+    - Sample: HHVBF
+      Yield: 0.02159410610233095
+      Error: 0.000697666121121461
+    - Sample: t
+      Yield: 172.93956511358428
+      Error: 6.064481881286186
+    - Sample: Othertop
+      Yield: 20.290726302033825
+      Error: 0.723166670193088
+    - Sample: Single-H
+      Yield: 15.801849292437993
+      Error: 0.5356106983124871
+    - Sample: VV
+      Yield: 212.066822239769
+      Error: 6.86327324059314
+    - Sample: VVV
+      Yield: 1.1150734981810988
+      Error: 0.0356392795329741
+    - Sample: V
+      Yield: 22.963604584276975
+      Error: 0.9157760452448895
+    - Sample: W+jets
+      Yield: 194.24317748786527
+      Error: 8.074084439514095
+    - Sample: Z+jets
+      Yield: 167.0729102268272
+      Error: 6.486832751396216
+    - Sample: Total
+      Yield: 807.346078130307
+      Error: 28.909599439047504
+    - Data: data
+      Yield: 656
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.04213223709998399
+      Error: 0.0019253001389411273
+    - Sample: HHVBF
+      Yield: 0.002827908548787322
+      Error: 0.00013521843946778713
+    - Sample: t
+      Yield: 174.17953960430017
+      Error: 7.187389675616963
+    - Sample: Othertop
+      Yield: 23.853276789301198
+      Error: 1.055952614222067
+    - Sample: Single-H
+      Yield: 7.820028159221154
+      Error: 0.3341549569300219
+    - Sample: VV
+      Yield: 86.29805602527611
+      Error: 3.7977976231431554
+    - Sample: VVV
+      Yield: 0.2863141793890444
+      Error: 0.013248098248140902
+    - Sample: V
+      Yield: 47.36290139748951
+      Error: 2.8699660654252788
+    - Sample: W+jets
+      Yield: 1268.4208020604992
+      Error: 102.60605069387341
+    - Sample: Z+jets
+      Yield: 444.899334252283
+      Error: 29.81885542100547
+    - Sample: Total
+      Yield: 2053.165212613408
+      Error: 142.72131792216493
+    - Data: data
+      Yield: 1777
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8317384485520264
+      Error: 0.07902802696171807
+    - Sample: HHVBF
+      Yield: 0.021598754453679155
+      Error: 0.0014785345741775272
+    - Sample: t
+      Yield: 154.70935247557782
+      Error: 5.752204534345494
+    - Sample: Othertop
+      Yield: 19.20904838241659
+      Error: 0.710648021281677
+    - Sample: Single-H
+      Yield: 14.839145361893502
+      Error: 0.641460597942921
+    - Sample: VV
+      Yield: 180.86678528116158
+      Error: 6.683637190259465
+    - Sample: VVV
+      Yield: 0.9724457942434386
+      Error: 0.0368164405748378
+    - Sample: V
+      Yield: 13.521081329683055
+      Error: 0.5628726585610586
+    - Sample: W+jets
+      Yield: 157.84846154936193
+      Error: 6.285872579136181
+    - Sample: Z+jets
+      Yield: 123.5131592290422
+      Error: 4.507991312154347
+    - Sample: Total
+      Yield: 666.3328166063858
+      Error: 24.76906945874804
+    - Data: data
+      Yield: 535
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.041149067776943285
+      Error: 0.001672369893311541
+    - Sample: HHVBF
+      Yield: 0.0028232601974391173
+      Error: 0.00011884095092732512
+    - Sample: t
+      Yield: 192.40975224230664
+      Error: 8.043098234088298
+    - Sample: Othertop
+      Yield: 24.93495470891848
+      Error: 1.1999078648598673
+    - Sample: Single-H
+      Yield: 8.782732089765645
+      Error: 0.409778357970868
+    - Sample: VV
+      Yield: 117.49809298388324
+      Error: 4.792790470138178
+    - Sample: VVV
+      Yield: 0.4289418833267049
+      Error: 0.017452922769676586
+    - Sample: V
+      Yield: 56.8054246520834
+      Error: 2.8328296354679945
+    - Sample: W+jets
+      Yield: 1304.8155179990022
+      Error: 103.09234060029372
+    - Sample: Z+jets
+      Yield: 488.45908525006826
+      Error: 27.185011923088993
+    - Sample: Total
+      Yield: 2194.178474137329
+      Error: 143.49784920797123
+    - Data: data
+      Yield: 1898

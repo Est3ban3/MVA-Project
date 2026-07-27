@@ -1,0 +1,21 @@
+<!--
+This xml file created automatically on: 
+2026-7-27
+-->
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="hh2l2tau_combined/RooStats/hh2l2tau_combined" >
+
+
+  <Input>./hh2l2tau_combined/RooStats//hh2l2tau_combined_SR__XGB_COMBINED.xml</Input>
+  <Input>./hh2l2tau_combined/RooStats//hh2l2tau_combined_SR__DNN_COMBINED.xml</Input>
+  <Input>./hh2l2tau_combined/RooStats//hh2l2tau_combined_SR__MLP_COMBINED.xml</Input>
+  <Input>./hh2l2tau_combined/RooStats//hh2l2tau_combined_SR__GNN_COMBINED.xml</Input>
+  <Input>./hh2l2tau_combined/RooStats//hh2l2tau_combined_SR__PNN_COMBINED.xml</Input>
+
+  <Measurement Name="hh2l2tau_combined" Lumi="1" LumiRelErr="0.1" ExportOnly="True"  >
+    <POI>mu_XS_hh</POI>  
+    <ParamSetting Const="True">Lumi</ParamSetting>
+  </Measurement> 
+
+</Combination>
