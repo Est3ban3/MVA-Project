@@ -5,9 +5,9 @@ gana la celda ejecutada al final) y, opcionalmente, compara la logica de una
 funcion entre notebooks via AST normalizado (ignora comentarios/docstrings/formato).
 
 Uso:
-  python3 check_dupes.py Final_Notebooks/*.ipynb
-  python3 check_dupes.py --fn run_optuna_search Final_Notebooks/*.ipynb
-  python3 check_dupes.py --fn significance_scan Final_Notebooks/*.ipynb
+  python3 check_dupes.py notebooks/*.ipynb
+  python3 check_dupes.py --fn run_optuna_search notebooks/*.ipynb
+  python3 check_dupes.py --fn significance_scan notebooks/*.ipynb
 """
 import ast, json, sys, hashlib, textwrap, argparse
 from pathlib import Path

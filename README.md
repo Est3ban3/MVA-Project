@@ -6,15 +6,37 @@ channels (`1l2tau`, `2l2tau`) and two data-taking campaigns (Run 2, Run 3).
 
 The two canonical, ready-to-run pipelines are:
 
-- [`Final_Notebooks/1L2Tau_Master_Pipeline.ipynb`](Final_Notebooks/1L2Tau_Master_Pipeline.ipynb) — 1 lepton + 2 tau channel
-- [`Final_Notebooks/2L2Tau_Master_Pipeline.ipynb`](Final_Notebooks/2L2Tau_Master_Pipeline.ipynb) — 2 lepton + 2 tau channel
+- [`notebooks/1L2Tau_Master_Pipeline.ipynb`](notebooks/1L2Tau_Master_Pipeline.ipynb) — 1 lepton + 2 tau channel
+- [`notebooks/2L2Tau_Master_Pipeline.ipynb`](notebooks/2L2Tau_Master_Pipeline.ipynb) — 2 lepton + 2 tau channel
 
-They replace the earlier, duplicated exploration notebooks under `Esteban/`
-and `Evie/` (`First_Training.ipynb`, `Combined_Runs.ipynb`, `Comparison.ipynb`,
-`Yields.ipynb`, `1L2TRun2_combo.ipynb`, `HISTOALL2.ipynb`, ...), which are kept
-around for reference/history but are no longer the recommended entry point.
+They replace the earlier, duplicated exploration notebooks now archived under
+`legacy/esteban/` and `legacy/evie/` (`First_Training.ipynb`,
+`Combined_Runs.ipynb`, `Comparison.ipynb`, `Yields.ipynb`,
+`1L2TRun2_combo.ipynb`, `HISTOALL2.ipynb`, ...), which are kept around for
+reference/history but are no longer the recommended entry point.
 Both master pipelines share the exact same architecture and section layout —
 see [Master pipelines](#master-pipelines) below for full documentation.
+
+
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `data/` | Raw ATLAS ntuples, `<channel>/<run>/*.root` (~2 GB, gitignored). |
+| `notebooks/` | The 17 analysis notebooks, incl. both master pipelines. |
+| `notebooks/PPSSP_2026/` | Their working tree: trained models, splits, plots, summary CSVs. Notebooks reference this path *relative to `notebooks/`*, so it must keep this name. |
+| `scripts/` | Standalone `.py` tools (TRExFitter input builder, data scorer, result summarizer, notebook audits). Each resolves the repo root as `Path(__file__).resolve().parent.parent`. |
+| `trexfitter/configs_original/` | The supervisor's original HIST-mode configs — hand-written source of truth. |
+| `trexfitter/package/` | The runnable NTUP-mode package, auto-generated from those by `scripts/Build_TRExFitter_Inputs.py`. |
+| `trexfitter/results/` | TRExFitter fit outputs, one dir per `<channel>_<run>_<MODEL>`, plus `summary.csv`. |
+| `new_data/` | The supervisor's real-data ntuples. |
+| `new_data_scored/` | Those files with per-model score branches added, by `scripts/Score_New_Data.py`. |
+| `legacy/` | Superseded exploration notebooks and one-off plots. Reference only. |
+
+Note that `data/` (raw input ntuples) and `notebooks/PPSSP_2026/` (the
+notebooks' own working tree) are separate: the notebooks read ROOT files from
+paths under `PPSSP_2026/`, so a fresh clone needs the ntuples placed or
+symlinked there. Both trees gitignore `*.root`.
 
 
 ## ROOT File Meaning
@@ -48,8 +70,8 @@ see [Master pipelines](#master-pipelines) below for full documentation.
 
 ## Master Pipelines
 
-Both `Final_Notebooks/1L2Tau_Master_Pipeline.ipynb` and
-`Final_Notebooks/2L2Tau_Master_Pipeline.ipynb` are self-contained, documented
+Both `notebooks/1L2Tau_Master_Pipeline.ipynb` and
+`notebooks/2L2Tau_Master_Pipeline.ipynb` are self-contained, documented
 notebooks built around the same idea: the loading / cleaning / training /
 pruning / tuning logic is written **once** as a small library of helper
 functions, and every run (Run 2, Run 3, Combined, domain-shift check) just
@@ -126,7 +148,7 @@ Both notebooks follow the same seven sections:
 
 ### Outputs
 
-All paths below are relative to `Final_Notebooks/`, with `<ch>` = `1l2tau` or
+All paths below are relative to `notebooks/`, with `<ch>` = `1l2tau` or
 `2l2tau` and the 2l2tau top-level domain-shift outputs suffixed `_2l2tau`:
 
 | Path | Contents |

@@ -3,17 +3,20 @@
 # macOS Finder metadata - was tracked in 8 places until 2026-07-28, pure noise.
 .DS_Store
 
-/Esteban/plots_run3_1l2tau
-/Esteban/plots_run2_2l2tau
-/Esteban/plots_run3_2l2tau
-/Esteban/plots_run2_1l2tau
-PPSSP_2026.zip
+# Python bytecode cache (scripts/ is run directly, never imported as a package).
+__pycache__/
+*.pyc
+
+/legacy/esteban/plots_run3_1l2tau
+/legacy/esteban/plots_run2_2l2tau
+/legacy/esteban/plots_run3_2l2tau
+/legacy/esteban/plots_run2_1l2tau
 CLAUDE.md
-TREXFitter_package.zip
 *.zip
 # Large ROOT ntuples/splits are ignored via per-folder .gitignore files inside
-# each PPSSP_2026/ tree (see /PPSSP_2026/.gitignore, /Evie/PPSSP_2026/.gitignore,
-# /Esteban/PPSSP_2026/.gitignore, /Final_Notebooks/PPSSP_2026/.gitignore) so
+# the trees that hold them (see /data/.gitignore for the raw ntuples,
+# /notebooks/PPSSP_2026/.gitignore for the notebook working tree,
+# /trexfitter/package/ntuples/*/.gitignore, /new_data{,_scored}/.gitignore) so
 # that plots/summary artifacts under those same trees stay tracked.
 
 # Trained model artifacts (XGBoost JSON dumps: final_model_*/model_*_fold*.json,

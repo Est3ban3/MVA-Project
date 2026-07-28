@@ -4,7 +4,7 @@ Audita significance_scan en cada notebook.
 Encuentra TODAS las definiciones (no solo la primera) y compara la LOGICA via AST
 normalizado, que ignora comentarios, docstrings y formato.
 
-Uso:  python3 check_sigscan.py Final_Notebooks/*.ipynb
+Uso:  python3 check_sigscan.py notebooks/*.ipynb
 """
 import ast, json, sys, hashlib, textwrap
 from pathlib import Path

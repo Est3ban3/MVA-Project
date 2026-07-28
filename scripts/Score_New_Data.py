@@ -1,10 +1,10 @@
-"""Score the supervisor's New_Data/*.root files with every trained model.
+"""Score the supervisor's new_data/*.root files with every trained model.
 
 Loads the saved fold models of all 5 families (XGBoost, DNN, MLP, GNN, PNN)
 for all three tracks and writes, per data file, a preselected copy with the
-same 13 extra branches the MC ntuples in TREXFitter_package/ carry:
+same 13 extra branches the MC ntuples in trexfitter/package/ carry:
 score_{xgboost,dnn,mlp,gnn}[_comb], score_pnn, w_phys, label, process_id,
-fold. Output goes to New_Data_scored/ (kept separate from the package on
+fold. Output goes to new_data_scored/ (kept separate from the package on
 purpose).
 
 Conventions reproduced from the notebooks (verified — see --verify):
@@ -24,7 +24,7 @@ Conventions reproduced from the notebooks (verified — see --verify):
     {k, (k+1)%5}, negative weights dropped, medians+scaler on that split) —
     correctness proven by --verify reproducing the stored MC OOF scores.
 
---verify re-scores the MC ntuples in TREXFitter_package/ntuples/ and compares
+--verify re-scores the MC ntuples in trexfitter/package/ntuples/ and compares
 against their stored score branches for every (channel, run, model, track);
 run it after any artifact regeneration. Scoring data refuses to run unless
 verification has passed in the same invocation (default) or --skip-verify is
@@ -47,11 +47,11 @@ import xgboost as xgb
 from sklearn.preprocessing import StandardScaler
 from torch_geometric.nn import GATv2Conv, global_mean_pool, global_max_pool
 
-REPO = Path(__file__).resolve().parent
-MC_BASE = REPO / "Final_Notebooks" / "PPSSP_2026"
-PKG_NTUPLES = REPO / "TREXFitter_package" / "ntuples"
-DATA_DIR = REPO / "New_Data"
-OUT_DIR = REPO / "New_Data_scored"
+REPO = Path(__file__).resolve().parent.parent
+MC_BASE = REPO / "notebooks" / "PPSSP_2026"
+PKG_NTUPLES = REPO / "trexfitter" / "package" / "ntuples"
+DATA_DIR = REPO / "new_data"
+OUT_DIR = REPO / "new_data_scored"
 
 TREE_NAME = "AnalysisMiniTree"
 N_FOLDS = 5
