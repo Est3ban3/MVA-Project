@@ -21,12 +21,20 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS = os.path.join(REPO, "trexfitter", "results")
 
 METHODS = ["XGB", "DNN", "MLP", "PNN", "GNN"]
-ERAS = ["run2", "run3", "combined", "stat-comb"]
+ERAS = ["run2", "run3", "stat-comb"]
+# The statistical combination is the only combination we quote, so it is the one
+# labelled "combined" for the reader.
+ERA_LABELS = {"run2": "run2", "run3": "run3", "stat-comb": "combined"}
 
 
 def parse_name(config):
-    """hh1l2tau_run3_XGB -> (1l2tau, run3, XGB); combine_1l2tau_XGB -> (1l2tau, stat-comb, XGB)."""
-    m = re.match(r"hh(\dl2tau)_(run2|run3|combined)_(\w+)$", config)
+    """hh1l2tau_run3_XGB -> (1l2tau, run3, XGB); combine_1l2tau_XGB -> (1l2tau, stat-comb, XGB).
+
+    The hh*_combined_* fits merge the Run 2 and Run 3 samples into a single
+    template, which is not a valid combination when the two runs have different
+    cross sections and luminosities, so those directories are skipped.
+    """
+    m = re.match(r"hh(\dl2tau)_(run2|run3)_(\w+)$", config)
     if m:
         return m.group(1), m.group(2), m.group(3)
     m = re.match(r"combine_(\dl2tau)_(\w+)$", config)
@@ -122,7 +130,7 @@ def plot(df, path):
             off = (i - 2) * 0.14
             ax.errorbar(x + off, vals, yerr=[lo, hi], fmt="o", capsize=3, label=method)
         ax.set_xticks(x)
-        ax.set_xticklabels(ERAS)
+        ax.set_xticklabels([ERA_LABELS[e] for e in ERAS])
         ax.set_title(f"HH $\\to$ {channel}")
         ax.grid(alpha=0.3, axis="y")
     axes[0].set_ylabel(r"expected 95% CL upper limit on $\mu_{HH}$")
