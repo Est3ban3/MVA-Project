@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.3733145779992586
+      Error: 0.02527152354593386
+    - Sample: HHVBF
+      Yield: 0.01514727844676462
+      Error: 0.0008232436715248084
+    - Sample: t
+      Yield: 24.40977892590078
+      Error: 1.3322726711061936
+    - Sample: Othertop
+      Yield: 3.9234808255922986
+      Error: 0.23174053188319682
+    - Sample: Single-H
+      Yield: 3.047760628649453
+      Error: 0.20703501338631722
+    - Sample: VV
+      Yield: 29.556739538216366
+      Error: 1.6094423049836426
+    - Sample: VVV
+      Yield: 1.5952671017904907
+      Error: 0.08647551008118337
+    - Sample: V
+      Yield: 9.08513641799753
+      Error: 0.5941922361554549
+    - Sample: W+jets
+      Yield: 3.0612211734337205
+      Error: 0.17499565735872794
+    - Sample: Z+jets
+      Yield: 76.00543777582949
+      Error: 5.255393305374917
+    - Sample: Total
+      Yield: 151.07328424385616
+      Error: 9.210224500317551
+    - Data: data
+      Yield: 95
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.02601673353311462
+      Error: 0.0020152579973803154
+    - Sample: HHVBF
+      Yield: 0.0021689861545982035
+      Error: 0.0001688352781930628
+    - Sample: t
+      Yield: 21.13035332433629
+      Error: 1.3872522948281683
+    - Sample: Othertop
+      Yield: 2.1564427332682077
+      Error: 0.13727644745564213
+    - Sample: Single-H
+      Yield: 1.6000740928584305
+      Error: 0.13855543919148539
+    - Sample: VV
+      Yield: 28.383607727699765
+      Error: 1.7038112009613915
+    - Sample: VVV
+      Yield: 0.43774491223487444
+      Error: 0.03132161876932938
+    - Sample: V
+      Yield: 94.77413798665124
+      Error: 5.050890269485699
+    - Sample: W+jets
+      Yield: 12.00894121952889
+      Error: 0.7721601200622884
+    - Sample: Z+jets
+      Yield: 722.9798376541684
+      Error: 40.25884118836914
+    - Sample: Total
+      Yield: 883.4993253704338
+      Error: 48.160820590759776
+    - Data: data
+      Yield: 330

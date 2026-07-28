@@ -1,0 +1,17 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="hh1l2tau_combined_XGB/RooStats/hh1l2tau_combined_XGB" >
+
+
+  <Input>./hh1l2tau_combined_XGB/RooStats//hh1l2tau_combined_XGB_SR__XGB_COMBINED.xml</Input>
+
+  <Measurement Name="hh1l2tau_combined_XGB" Lumi="1" LumiRelErr="0.1" ExportOnly="True"  >
+    <POI>mu_XS_hh</POI>  
+    <ParamSetting Const="True">Lumi</ParamSetting>
+  </Measurement> 
+
+</Combination>

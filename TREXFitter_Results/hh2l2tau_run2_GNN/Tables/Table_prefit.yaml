@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.3739801847925736
+      Error: 0.02933480506012663
+    - Sample: HHVBF
+      Yield: 0.015704182561005288
+      Error: 0.0013033468035065171
+    - Sample: t
+      Yield: 32.32251678381382
+      Error: 3.0124560691766518
+    - Sample: Othertop
+      Yield: 5.214651410623358
+      Error: 0.4196532727434348
+    - Sample: Single-H
+      Yield: 3.684761672917422
+      Error: 0.2944897304832179
+    - Sample: VV
+      Yield: 28.720427712560127
+      Error: 2.525834327479255
+    - Sample: VVV
+      Yield: 1.731685139930081
+      Error: 0.1501927131327791
+    - Sample: V
+      Yield: 10.928355474151601
+      Error: 0.8980167329030389
+    - Sample: W+jets
+      Yield: 12.804780246325299
+      Error: 1.67801331922209
+    - Sample: Z+jets
+      Yield: 107.17365512247287
+      Error: 10.197328102814158
+    - Sample: Total
+      Yield: 202.97051793014813
+      Error: 18.695507261367787
+    - Data: data
+      Yield: 101
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.025351126739798946
+      Error: 0.0019037589265448645
+    - Sample: HHVBF
+      Yield: 0.00161208204035754
+      Error: 0.00012916629133757286
+    - Sample: t
+      Yield: 13.217615466423258
+      Error: 0.9626888876909272
+    - Sample: Othertop
+      Yield: 0.8652721482371437
+      Error: 0.07520603931314442
+    - Sample: Single-H
+      Yield: 0.9630730485904604
+      Error: 0.059302302169414164
+    - Sample: VV
+      Yield: 29.219919553356
+      Error: 1.7390271626548248
+    - Sample: VVV
+      Yield: 0.3013268740952838
+      Error: 0.022773388220046775
+    - Sample: V
+      Yield: 92.93091893049716
+      Error: 4.774679936458836
+    - Sample: W+jets
+      Yield: 2.2653821466373105
+      Error: 0.2816833131729041
+    - Sample: Z+jets
+      Yield: 691.811620307525
+      Error: 38.45266909064317
+    - Sample: Total
+      Yield: 831.6020916841418
+      Error: 45.330947349077945
+    - Data: data
+      Yield: 324

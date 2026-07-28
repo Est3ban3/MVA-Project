@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.6694822661135398
+      Error: 7.531483401928053
+    - Sample: HHVBF
+      Yield: 0.01707690152654488
+      Error: 0.19232723291031137
+    - Sample: t
+      Yield: 80.45880977279826
+      Error: 2.1084575055348105
+    - Sample: Othertop
+      Yield: 11.265870695335432
+      Error: 0.3104138045199622
+    - Sample: Single-H
+      Yield: 13.993791691892586
+      Error: 0.4776162564859257
+    - Sample: VV
+      Yield: 143.9345109965558
+      Error: 3.8806613417909896
+    - Sample: VVV
+      Yield: 0.8857930299385713
+      Error: 0.02293578402368674
+    - Sample: V
+      Yield: 7.189925775242422
+      Error: 0.19612105603648328
+    - Sample: W+jets
+      Yield: 96.64414409252629
+      Error: 3.5845698504210954
+    - Sample: Z+jets
+      Yield: 73.49528249500877
+      Error: 2.1903914116813015
+    - Sample: Total
+      Yield: 428.55468771693825
+      Error: 13.669005900606823
+    - Data: data
+      Yield: 318
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.03640031507415621
+      Error: 0.0014336286083764197
+    - Sample: HHVBF
+      Yield: 0.0020753509809368193
+      Error: 8.007137255290136e-05
+    - Sample: t
+      Yield: 88.94701834074496
+      Error: 3.390698544397426
+    - Sample: Othertop
+      Yield: 11.084237173133864
+      Error: 0.43385145702363587
+    - Sample: Single-H
+      Yield: 4.052831003524394
+      Error: 0.16664667168200512
+    - Sample: VV
+      Yield: 105.04614337774346
+      Error: 3.901711770067527
+    - Sample: VVV
+      Yield: 0.39359324431265585
+      Error: 0.015193400641159103
+    - Sample: V
+      Yield: 30.95923342152504
+      Error: 1.4145819874948098
+    - Sample: W+jets
+      Yield: 520.8144846111416
+      Error: 28.582500992310337
+    - Sample: Z+jets
+      Yield: 334.2081108361865
+      Error: 16.357906406169004
+    - Sample: Total
+      Yield: 1095.5441276743675
+      Error: 51.245192469765286
+    - Data: data
+      Yield: 855

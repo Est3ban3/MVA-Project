@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.4401269839878036
+      Error: 0.035384323352895465
+    - Sample: HHVBF
+      Yield: 0.01842601500349971
+      Error: 0.0013098006703613034
+    - Sample: t
+      Yield: 65.09369024458745
+      Error: 4.3283659242456665
+    - Sample: Othertop
+      Yield: 6.848095536147795
+      Error: 0.48162313121250444
+    - Sample: Single-H
+      Yield: 11.601451795042614
+      Error: 0.9246621353286112
+    - Sample: VV
+      Yield: 39.520386641296916
+      Error: 2.65907923909698
+    - Sample: VVV
+      Yield: 1.9722567006288863
+      Error: 0.13409233021285732
+    - Sample: V
+      Yield: 26.344211921065295
+      Error: 2.4961390940976695
+    - Sample: W+jets
+      Yield: 15.329180478758198
+      Error: 1.2536447054266995
+    - Sample: Z+jets
+      Yield: 165.72432197169545
+      Error: 13.448248385042303
+    - Sample: Total
+      Yield: 332.8921482882139
+      Error: 24.765078161714936
+    - Data: data
+      Yield: 201
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.03145855865227519
+      Error: 0.0022058535686971955
+    - Sample: HHVBF
+      Yield: 0.0014595625315743377
+      Error: 0.00010268472935843128
+    - Sample: t
+      Yield: 34.13374799721615
+      Error: 2.1299381430257784
+    - Sample: Othertop
+      Yield: 2.673899903267571
+      Error: 0.17810160329741995
+    - Sample: Single-H
+      Yield: 45.258829024830696
+      Error: 2.3061100633382834
+    - Sample: VV
+      Yield: 41.875279181584084
+      Error: 2.338177187557339
+    - Sample: VVV
+      Yield: 0.3675324661861301
+      Error: 0.02481926296778015
+    - Sample: V
+      Yield: 206.7138510367369
+      Error: 9.601060495426033
+    - Sample: W+jets
+      Yield: 1.7290449833428685
+      Error: 0.2261902800839236
+    - Sample: Z+jets
+      Yield: 1493.0751749365038
+      Error: 69.55411850484349
+    - Sample: Total
+      Yield: 1825.860277650852
+      Error: 84.84907632999837
+    - Data: data
+      Yield: 918

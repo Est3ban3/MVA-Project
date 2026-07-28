@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.834205670996407
+      Error: 0.04998383962856027
+    - Sample: HHVBF
+      Yield: 0.022052692885329756
+      Error: 0.001123356542263482
+    - Sample: t
+      Yield: 156.23099149924556
+      Error: 6.11657466305599
+    - Sample: Othertop
+      Yield: 19.199613663681273
+      Error: 0.7309710050676217
+    - Sample: Single-H
+      Yield: 15.434496015887856
+      Error: 0.5900056583822756
+    - Sample: VV
+      Yield: 183.04149482313005
+      Error: 7.210699729957229
+    - Sample: VVV
+      Yield: 0.9775003560386231
+      Error: 0.03815710445579141
+    - Sample: V
+      Yield: 15.448384525957948
+      Error: 0.598950979756475
+    - Sample: W+jets
+      Yield: 153.79650152755752
+      Error: 6.89978212218337
+    - Sample: Z+jets
+      Yield: 133.9756759598276
+      Error: 5.476535936150341
+    - Sample: Total
+      Yield: 678.9609167352082
+      Error: 27.081959284675012
+    - Data: data
+      Yield: 586
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.0386818453325661
+      Error: 0.0017435765727125418
+    - Sample: HHVBF
+      Yield: 0.0023693217657885153
+      Error: 0.00011295211995913902
+    - Sample: t
+      Yield: 190.88811321863884
+      Error: 8.468076051687762
+    - Sample: Othertop
+      Yield: 24.944389427653782
+      Error: 1.1998965847277425
+    - Sample: Single-H
+      Yield: 8.187381435771291
+      Error: 0.4162686685596191
+    - Sample: VV
+      Yield: 115.32338344191515
+      Error: 5.069948897094465
+    - Sample: VVV
+      Yield: 0.4238873215315203
+      Error: 0.018813066345920445
+    - Sample: V
+      Yield: 54.87812145580853
+      Error: 3.1905897993708776
+    - Sample: W+jets
+      Yield: 1308.8674780208073
+      Error: 99.1242382325008
+    - Sample: Z+jets
+      Yield: 477.99656851928256
+      Error: 30.129990510507493
+    - Sample: Total
+      Yield: 2181.5503740085073
+      Error: 143.07937311320975
+    - Data: data
+      Yield: 1847

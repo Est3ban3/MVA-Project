@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.43893309129355335
+      Error: 4.604062614505564
+    - Sample: HHVBF
+      Yield: 0.017738686942502854
+      Error: 0.18617984868824813
+    - Sample: t
+      Yield: 51.06340576050289
+      Error: 1.955869188574496
+    - Sample: Othertop
+      Yield: 4.656018097252498
+      Error: 0.2003773935157391
+    - Sample: Single-H
+      Yield: 8.957410081582903
+      Error: 0.3499212708998067
+    - Sample: VV
+      Yield: 35.12625925093226
+      Error: 1.3326287288386702
+    - Sample: VVV
+      Yield: 1.6279317088221787
+      Error: 0.06349140410006662
+    - Sample: V
+      Yield: 24.442972627325545
+      Error: 0.9282530838474022
+    - Sample: W+jets
+      Yield: 2.4124960375172866
+      Error: 0.1329829693199211
+    - Sample: Z+jets
+      Yield: 162.82085367898645
+      Error: 6.548921008087885
+    - Sample: Total
+      Yield: 291.5640190211581
+      Error: 11.840738263055451
+    - Data: data
+      Yield: 189
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.032652451346527125
+      Error: 0.0016580771992140832
+    - Sample: HHVBF
+      Yield: 0.002146890592571333
+      Error: 0.00011066821218486957
+    - Sample: t
+      Yield: 48.16403248130072
+      Error: 2.2865260349533503
+    - Sample: Othertop
+      Yield: 4.865977342162867
+      Error: 0.23125353369506738
+    - Sample: Single-H
+      Yield: 47.902870738290424
+      Error: 2.0439430610352636
+    - Sample: VV
+      Yield: 46.26940657194876
+      Error: 2.0495638175362894
+    - Sample: VVV
+      Yield: 0.7118574579928373
+      Error: 0.033563342126986334
+    - Sample: V
+      Yield: 208.61509033047665
+      Error: 10.171173492462007
+    - Sample: W+jets
+      Yield: 13.876106723517104
+      Error: 0.8612411721609712
+    - Sample: Z+jets
+      Yield: 1495.9786432292135
+      Error: 70.94008946281056
+    - Sample: Total
+      Yield: 1866.418784216842
+      Error: 86.62455369645329
+    - Data: data
+      Yield: 930

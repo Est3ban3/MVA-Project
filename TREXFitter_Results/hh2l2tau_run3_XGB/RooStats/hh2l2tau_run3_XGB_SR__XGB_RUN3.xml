@@ -1,0 +1,66 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Channel  SYSTEM 'HistFactorySchema.dtd'>  
+
+  <Channel Name="SR__XGB_RUN3" InputFile="" >
+
+    <Data HistoName="SR__XGB_RUN3_data_2l2tau_run3_regBin" InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root" HistoPath="SR__XGB_RUN3/data_2l2tau_run3/nominal/"  /> 
+
+    <StatErrorConfig RelErrorThreshold="0.001" ConstraintType="Poisson" /> 
+
+    <Sample Name="HH_ggF"  HistoPath="SR__XGB_RUN3/HH_ggF/nominal/"  HistoName="SR__XGB_RUN3_HH_ggF_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="HH_VBF"  HistoPath="SR__XGB_RUN3/HH_VBF/nominal/"  HistoName="SR__XGB_RUN3_HH_VBF_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="ttbar"  HistoPath="SR__XGB_RUN3/ttbar/nominal/"  HistoName="SR__XGB_RUN3_ttbar_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="tops"  HistoPath="SR__XGB_RUN3/tops/nominal/"  HistoName="SR__XGB_RUN3_tops_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="SingleH"  HistoPath="SR__XGB_RUN3/SingleH/nominal/"  HistoName="SR__XGB_RUN3_SingleH_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VV"  HistoPath="SR__XGB_RUN3/VV/nominal/"  HistoName="SR__XGB_RUN3_VV_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VVV"  HistoPath="SR__XGB_RUN3/VVV/nominal/"  HistoName="SR__XGB_RUN3_VVV_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Vgamma"  HistoPath="SR__XGB_RUN3/Vgamma/nominal/"  HistoName="SR__XGB_RUN3_Vgamma_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Wjets"  HistoPath="SR__XGB_RUN3/Wjets/nominal/"  HistoName="SR__XGB_RUN3_Wjets_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Zjets"  HistoPath="SR__XGB_RUN3/Zjets/nominal/"  HistoName="SR__XGB_RUN3_Zjets_regBin"  InputFile="hh2l2tau_run3_XGB/Histograms/hh2l2tau_run3_XGB_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+
+  </Channel>  

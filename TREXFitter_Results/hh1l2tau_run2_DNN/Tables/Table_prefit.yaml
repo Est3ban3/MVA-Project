@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.6679750833123453
+      Error: 0.038242946708989194
+    - Sample: HHVBF
+      Yield: 0.017108557073701153
+      Error: 0.0006990698047154498
+    - Sample: t
+      Yield: 77.76349240279536
+      Error: 3.4231472204595104
+    - Sample: Othertop
+      Yield: 10.838354982200872
+      Error: 0.41621300557068236
+    - Sample: Single-H
+      Yield: 13.929486182374003
+      Error: 0.5034641410638926
+    - Sample: VV
+      Yield: 143.51083689218544
+      Error: 5.871410213419176
+    - Sample: VVV
+      Yield: 0.9113834602271494
+      Error: 0.03659374015024694
+    - Sample: V
+      Yield: 7.130143481467143
+      Error: 0.27475584178531093
+    - Sample: W+jets
+      Yield: 80.75222602683485
+      Error: 4.974729519054481
+    - Sample: Z+jets
+      Yield: 63.4888659213173
+      Error: 2.7939592067331294
+    - Sample: Total
+      Yield: 399.0098729897882
+      Error: 17.985267947262372
+    - Data: data
+      Yield: 300
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.03790749787534572
+      Error: 0.0015440544497470274
+    - Sample: HHVBF
+      Yield: 0.0020436954337804103
+      Error: 8.058284141330181e-05
+    - Sample: t
+      Yield: 91.64233571074787
+      Error: 3.5043508127352365
+    - Sample: Othertop
+      Yield: 11.51175288626841
+      Error: 0.42613516779093674
+    - Sample: Single-H
+      Yield: 4.117136513042966
+      Error: 0.17694279831745902
+    - Sample: VV
+      Yield: 105.46981748211414
+      Error: 4.0042658447261426
+    - Sample: VVV
+      Yield: 0.36800281402407775
+      Error: 0.014801956656070156
+    - Sample: V
+      Yield: 31.019015715300334
+      Error: 1.4912467668729532
+    - Sample: W+jets
+      Yield: 536.706402676833
+      Error: 28.47437369402828
+    - Sample: Z+jets
+      Yield: 344.21452740987775
+      Error: 16.15333730034477
+    - Sample: Total
+      Yield: 1125.0889424015177
+      Error: 51.60381193253112
+    - Data: data
+      Yield: 873

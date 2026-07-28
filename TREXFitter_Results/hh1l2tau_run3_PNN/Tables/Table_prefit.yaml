@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8317384485520264
+      Error: 0.07902802696171807
+    - Sample: HHVBF
+      Yield: 0.021598754453679155
+      Error: 0.0014785345741775272
+    - Sample: t
+      Yield: 154.70935247557782
+      Error: 5.752204534345494
+    - Sample: Othertop
+      Yield: 19.20904838241659
+      Error: 0.710648021281677
+    - Sample: Single-H
+      Yield: 14.839145361893502
+      Error: 0.641460597942921
+    - Sample: VV
+      Yield: 180.86678528116158
+      Error: 6.683637190259465
+    - Sample: VVV
+      Yield: 0.9724457942434386
+      Error: 0.0368164405748378
+    - Sample: V
+      Yield: 13.521081329683055
+      Error: 0.5628726585610586
+    - Sample: W+jets
+      Yield: 157.84846154936193
+      Error: 6.285872579136181
+    - Sample: Z+jets
+      Yield: 123.5131592290422
+      Error: 4.507991312154347
+    - Sample: Total
+      Yield: 666.3328166063858
+      Error: 24.76906945874804
+    - Data: data
+      Yield: 535
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.041149067776943285
+      Error: 0.001672369893311541
+    - Sample: HHVBF
+      Yield: 0.0028232601974391173
+      Error: 0.00011884095092732512
+    - Sample: t
+      Yield: 192.40975224230664
+      Error: 8.043098234088298
+    - Sample: Othertop
+      Yield: 24.93495470891848
+      Error: 1.1999078648598673
+    - Sample: Single-H
+      Yield: 8.782732089765645
+      Error: 0.409778357970868
+    - Sample: VV
+      Yield: 117.49809298388324
+      Error: 4.792790470138178
+    - Sample: VVV
+      Yield: 0.4289418833267049
+      Error: 0.017452922769676586
+    - Sample: V
+      Yield: 56.8054246520834
+      Error: 2.8328296354679945
+    - Sample: W+jets
+      Yield: 1304.8155179990022
+      Error: 103.09234060029372
+    - Sample: Z+jets
+      Yield: 488.45908525006826
+      Error: 27.185011923088993
+    - Sample: Total
+      Yield: 2194.178474137329
+      Error: 143.49784920797123
+    - Data: data
+      Yield: 1898
