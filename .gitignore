@@ -1,4 +1,8 @@
 /venv
+
+# macOS Finder metadata - was tracked in 8 places until 2026-07-28, pure noise.
+.DS_Store
+
 /Esteban/plots_run3_1l2tau
 /Esteban/plots_run2_2l2tau
 /Esteban/plots_run3_2l2tau
