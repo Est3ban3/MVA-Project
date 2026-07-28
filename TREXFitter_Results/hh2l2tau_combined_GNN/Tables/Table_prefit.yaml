@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.81822781054752
+      Error: 0.044780699237756294
+    - Sample: HHVBF
+      Yield: 0.03397871236065779
+      Error: 0.0017907521806328692
+    - Sample: t
+      Yield: 106.262970776103
+      Error: 6.1404120588483115
+    - Sample: Othertop
+      Yield: 12.500902616699088
+      Error: 0.7379437516021284
+    - Sample: Single-H
+      Yield: 14.576446101171847
+      Error: 0.8525381303031446
+    - Sample: VV
+      Yield: 69.35279189917091
+      Error: 3.8562125878502616
+    - Sample: VVV
+      Yield: 3.760516439575198
+      Error: 0.18979276409382512
+    - Sample: V
+      Yield: 28.596014002685145
+      Error: 1.640939099139492
+    - Sample: W+jets
+      Yield: 27.561810235157036
+      Error: 2.5510347548986316
+    - Sample: Z+jets
+      Yield: 213.9059210579788
+      Error: 13.159132512496349
+    - Sample: Total
+      Yield: 477.36957965144916
+      Error: 28.37220755448169
+    - Data: data
+      Yield: 312
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.05268904362493175
+      Error: 0.003105761006177679
+    - Sample: HHVBF
+      Yield: 0.0032231297757790833
+      Error: 0.00020509607969580767
+    - Sample: t
+      Yield: 38.504599715937694
+      Error: 2.0537220245617918
+    - Sample: Othertop
+      Yield: 3.1010163815767733
+      Error: 0.17609597323727477
+    - Sample: Single-H
+      Yield: 46.931669440209355
+      Error: 1.768641938052086
+    - Sample: VV
+      Yield: 69.98322118962626
+      Error: 3.0460041783596052
+    - Sample: VVV
+      Yield: 0.6122847412651835
+      Error: 0.035930595202271265
+    - Sample: V
+      Yield: 308.32132335976587
+      Error: 10.915651619541618
+    - Sample: W+jets
+      Yield: 2.823976238655348
+      Error: 0.22232658737885952
+    - Sample: Z+jets
+      Yield: 2243.878851280219
+      Error: 80.55061471913963
+    - Sample: Total
+      Yield: 2714.212854520656
+      Error: 97.015261820034
+    - Data: data
+      Yield: 1232

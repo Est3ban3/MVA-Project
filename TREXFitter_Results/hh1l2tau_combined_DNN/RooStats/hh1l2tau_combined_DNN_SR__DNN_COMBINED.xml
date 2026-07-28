@@ -1,0 +1,66 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Channel  SYSTEM 'HistFactorySchema.dtd'>  
+
+  <Channel Name="SR__DNN_COMBINED" InputFile="" >
+
+    <Data HistoName="SR__DNN_COMBINED_data_1l2tau_combined_regBin" InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root" HistoPath="SR__DNN_COMBINED/data_1l2tau_combined/nominal/"  /> 
+
+    <StatErrorConfig RelErrorThreshold="0.001" ConstraintType="Poisson" /> 
+
+    <Sample Name="HH_ggF"  HistoPath="SR__DNN_COMBINED/HH_ggF/nominal/"  HistoName="SR__DNN_COMBINED_HH_ggF_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="HH_VBF"  HistoPath="SR__DNN_COMBINED/HH_VBF/nominal/"  HistoName="SR__DNN_COMBINED_HH_VBF_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="ttbar"  HistoPath="SR__DNN_COMBINED/ttbar/nominal/"  HistoName="SR__DNN_COMBINED_ttbar_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="tops"  HistoPath="SR__DNN_COMBINED/tops/nominal/"  HistoName="SR__DNN_COMBINED_tops_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="SingleH"  HistoPath="SR__DNN_COMBINED/SingleH/nominal/"  HistoName="SR__DNN_COMBINED_SingleH_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VV"  HistoPath="SR__DNN_COMBINED/VV/nominal/"  HistoName="SR__DNN_COMBINED_VV_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VVV"  HistoPath="SR__DNN_COMBINED/VVV/nominal/"  HistoName="SR__DNN_COMBINED_VVV_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Vgamma"  HistoPath="SR__DNN_COMBINED/Vgamma/nominal/"  HistoName="SR__DNN_COMBINED_Vgamma_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Wjets"  HistoPath="SR__DNN_COMBINED/Wjets/nominal/"  HistoName="SR__DNN_COMBINED_Wjets_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Zjets"  HistoPath="SR__DNN_COMBINED/Zjets/nominal/"  HistoName="SR__DNN_COMBINED_Zjets_regBin"  InputFile="hh1l2tau_combined_DNN/Histograms/hh1l2tau_combined_DNN_histos.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+
+  </Channel>  

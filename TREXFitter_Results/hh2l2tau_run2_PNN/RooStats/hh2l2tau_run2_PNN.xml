@@ -1,0 +1,17 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="hh2l2tau_run2_PNN/RooStats/hh2l2tau_run2_PNN" >
+
+
+  <Input>./hh2l2tau_run2_PNN/RooStats//hh2l2tau_run2_PNN_SR__PNN_RUN2.xml</Input>
+
+  <Measurement Name="hh2l2tau_run2_PNN" Lumi="1" LumiRelErr="0.1" ExportOnly="True"  >
+    <POI>mu_XS_hh</POI>  
+    <ParamSetting Const="True">Lumi</ParamSetting>
+  </Measurement> 
+
+</Combination>

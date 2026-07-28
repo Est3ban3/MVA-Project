@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8312347113955686
+      Error: 0.06537759253439833
+    - Sample: HHVBF
+      Yield: 0.02213927217407537
+      Error: 0.0012283790818528916
+    - Sample: t
+      Yield: 159.15554152197618
+      Error: 5.960741529306128
+    - Sample: Othertop
+      Yield: 19.1634009139861
+      Error: 0.6926942875470342
+    - Sample: Single-H
+      Yield: 15.77958082972919
+      Error: 0.5768385111656104
+    - Sample: VV
+      Yield: 197.44142210082697
+      Error: 7.316827918104863
+    - Sample: VVV
+      Yield: 1.0424022275746299
+      Error: 0.039541653975032516
+    - Sample: V
+      Yield: 19.051605566437594
+      Error: 0.8099483152713606
+    - Sample: W+jets
+      Yield: 147.55147282609624
+      Error: 5.762971181481711
+    - Sample: Z+jets
+      Yield: 133.3365117007645
+      Error: 5.117981578891524
+    - Sample: Total
+      Yield: 693.3753116709611
+      Error: 25.81795732075728
+    - Data: data
+      Yield: 543
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.04165280493339936
+      Error: 0.0016683365376715374
+    - Sample: HHVBF
+      Yield: 0.0022827424770428995
+      Error: 0.00010236988620011075
+    - Sample: t
+      Yield: 187.96356319590816
+      Error: 7.697387154112892
+    - Sample: Othertop
+      Yield: 24.980602177348956
+      Error: 1.137984202737886
+    - Sample: Single-H
+      Yield: 7.842296621929961
+      Error: 0.38376178662767424
+    - Sample: VV
+      Yield: 100.92345616421802
+      Error: 4.300622115041345
+    - Sample: VVV
+      Yield: 0.35898544999551385
+      Error: 0.014527094616687988
+    - Sample: V
+      Yield: 51.274900415328865
+      Error: 3.005088610434809
+    - Sample: W+jets
+      Yield: 1315.112506722268
+      Error: 99.33598961702816
+    - Sample: Z+jets
+      Yield: 478.63573277834615
+      Error: 30.67219141461384
+    - Sample: Total
+      Yield: 2167.1359790727543
+      Error: 143.3128487224695
+    - Data: data
+      Yield: 1890

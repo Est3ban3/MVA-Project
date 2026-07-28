@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8328932427175949
+      Error: 13.142408576075832
+    - Sample: HHVBF
+      Yield: 0.02185455200153634
+      Error: 0.3453470022260001
+    - Sample: t
+      Yield: 161.66155800258207
+      Error: 4.256465759187726
+    - Sample: Othertop
+      Yield: 21.04662982262478
+      Error: 0.5647562888365928
+    - Sample: Single-H
+      Yield: 15.430922703391621
+      Error: 0.5159821097772639
+    - Sample: VV
+      Yield: 196.28433581629636
+      Error: 5.285743766012593
+    - Sample: VVV
+      Yield: 1.0336875036450242
+      Error: 0.029212685396855932
+    - Sample: V
+      Yield: 16.336904590138165
+      Error: 0.4882516936132231
+    - Sample: W+jets
+      Yield: 166.70095915545286
+      Error: 4.562070758353858
+    - Sample: Z+jets
+      Yield: 143.6451547447624
+      Error: 3.7366079109123422
+    - Sample: Total
+      Yield: 722.9949001336124
+      Error: 19.073309623244786
+    - Data: data
+      Yield: 560
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.03999427361137993
+      Error: 0.0018009330867520535
+    - Sample: HHVBF
+      Yield: 0.002567462649582101
+      Error: 0.00012166889020967132
+    - Sample: t
+      Yield: 185.45754671530233
+      Error: 8.492569049251308
+    - Sample: Othertop
+      Yield: 23.097373268710278
+      Error: 1.2234573667819908
+    - Sample: Single-H
+      Yield: 8.190954748267526
+      Error: 0.4275972009237921
+    - Sample: VV
+      Yield: 102.08054244874857
+      Error: 4.604717135581101
+    - Sample: VVV
+      Yield: 0.3677001739251193
+      Error: 0.01626206273780683
+    - Sample: V
+      Yield: 53.9896013916283
+      Error: 2.8105393927066507
+    - Sample: W+jets
+      Yield: 1295.9630203929116
+      Error: 103.21152747384154
+    - Sample: Z+jets
+      Yield: 468.32708973434796
+      Error: 27.046488218119542
+    - Sample: Total
+      Yield: 2137.5163906101025
+      Error: 143.47617453596004
+    - Data: data
+      Yield: 1873

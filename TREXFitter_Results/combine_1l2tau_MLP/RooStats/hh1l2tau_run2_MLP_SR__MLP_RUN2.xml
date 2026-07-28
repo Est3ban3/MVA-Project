@@ -1,0 +1,66 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Channel  SYSTEM 'HistFactorySchema.dtd'>  
+
+  <Channel Name="SR__MLP_RUN2" InputFile="" >
+
+    <Data HistoName="SR__MLP_RUN2_data_1l2tau_run2_regBin" InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root" HistoPath="/SR__MLP_RUN2_hists/data/"  /> 
+
+    <StatErrorConfig RelErrorThreshold="0.001" ConstraintType="Poisson" /> 
+
+    <Sample Name="HH_ggF"  HistoPath="/SR__MLP_RUN2_hists/HH_ggF/"  HistoName="SR__MLP_RUN2_HH_ggF_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="HH_VBF"  HistoPath="/SR__MLP_RUN2_hists/HH_VBF/"  HistoName="SR__MLP_RUN2_HH_VBF_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+      <NormFactor Name="mu_XS_hh"  Val="1"  High="500"  Low="-100"   /> 
+    </Sample>
+
+
+    <Sample Name="ttbar"  HistoPath="/SR__MLP_RUN2_hists/ttbar/"  HistoName="SR__MLP_RUN2_ttbar_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="tops"  HistoPath="/SR__MLP_RUN2_hists/tops/"  HistoName="SR__MLP_RUN2_tops_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="SingleH"  HistoPath="/SR__MLP_RUN2_hists/SingleH/"  HistoName="SR__MLP_RUN2_SingleH_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VV"  HistoPath="/SR__MLP_RUN2_hists/VV/"  HistoName="SR__MLP_RUN2_VV_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="VVV"  HistoPath="/SR__MLP_RUN2_hists/VVV/"  HistoName="SR__MLP_RUN2_VVV_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Vgamma"  HistoPath="/SR__MLP_RUN2_hists/Vgamma/"  HistoName="SR__MLP_RUN2_Vgamma_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Wjets"  HistoPath="/SR__MLP_RUN2_hists/Wjets/"  HistoName="SR__MLP_RUN2_Wjets_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+    <Sample Name="Zjets"  HistoPath="/SR__MLP_RUN2_hists/Zjets/"  HistoName="SR__MLP_RUN2_Zjets_regBin"  InputFile="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP_combined_hh1l2tau_run2_MLP_model.root"  NormalizeByTheory="True" >
+      <StatError Activate="True"  InputFile=""  HistoName=""  HistoPath=""  /> 
+    </Sample>
+
+
+
+  </Channel>  

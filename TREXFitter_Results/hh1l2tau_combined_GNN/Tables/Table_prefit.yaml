@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 1.507433495180957
+      Error: 0.04209636625924119
+    - Sample: HHVBF
+      Yield: 0.03921456973320262
+      Error: 0.000891977548286285
+    - Sample: t
+      Yield: 263.6421122081335
+      Error: 6.086133600247331
+    - Sample: Othertop
+      Yield: 33.941267802308026
+      Error: 0.7649106701013925
+    - Sample: Single-H
+      Yield: 31.381205858683785
+      Error: 0.7028354601701109
+    - Sample: VV
+      Yield: 392.6529834684382
+      Error: 8.900870332122375
+    - Sample: VVV
+      Yield: 2.1615034634988017
+      Error: 0.04811647939588342
+    - Sample: V
+      Yield: 33.610883678786664
+      Error: 0.8512693462704108
+    - Sample: W+jets
+      Yield: 280.212962030353
+      Error: 7.017413985424708
+    - Sample: Z+jets
+      Yield: 252.92526427008661
+      Error: 6.135394428313716
+    - Sample: Total
+      Yield: 1292.0748308452028
+      Error: 29.939429445355188
+    - Data: data
+      Yield: 1042
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.07133660233570582
+      Error: 0.002661222392665122
+    - Sample: HHVBF
+      Yield: 0.004359697425397217
+      Error: 0.00016758193670992272
+    - Sample: t
+      Yield: 252.88282062329424
+      Error: 8.315363959093501
+    - Sample: Othertop
+      Yield: 32.55284315749632
+      Error: 1.0852259777238442
+    - Sample: Single-H
+      Yield: 10.287294288392333
+      Error: 0.37720365211978807
+    - Sample: VV
+      Yield: 154.69254917090637
+      Error: 5.2722893925705305
+    - Sample: VVV
+      Yield: 0.5192704883225687
+      Error: 0.018685905940668556
+    - Sample: V
+      Yield: 74.86478149974728
+      Error: 3.332543381459158
+    - Sample: W+jets
+      Yield: 1799.9096462216792
+      Error: 109.39317342560682
+    - Sample: Z+jets
+      Yield: 766.7503735402189
+      Error: 31.927053221043835
+    - Sample: Total
+      Yield: 3092.5352752898184
+      Error: 152.62762974886087
+    - Data: data
+      Yield: 2564

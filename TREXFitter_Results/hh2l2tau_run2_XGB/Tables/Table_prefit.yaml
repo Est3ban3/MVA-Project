@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.3766783131869989
+      Error: 0.03725351676394962
+    - Sample: HHVBF
+      Yield: 0.015426619562537868
+      Error: 0.0013164932515040385
+    - Sample: t
+      Yield: 23.17856276906891
+      Error: 2.4288964449519543
+    - Sample: Othertop
+      Yield: 3.016131716659946
+      Error: 0.33408489261337837
+    - Sample: Single-H
+      Yield: 2.9546995896658896
+      Error: 0.2750484969036917
+    - Sample: VV
+      Yield: 25.007471180362597
+      Error: 2.2926998122761466
+    - Sample: VVV
+      Yield: 1.3014934196985817
+      Error: 0.12066131072370406
+    - Sample: V
+      Yield: 9.39639450274986
+      Error: 0.9359353714698792
+    - Sample: W+jets
+      Yield: 6.161036193631959
+      Error: 0.6339090880703714
+    - Sample: Z+jets
+      Yield: 88.70251326977663
+      Error: 9.976488447288945
+    - Sample: Total
+      Yield: 160.1104075743639
+      Error: 16.755211435246075
+    - Data: data
+      Yield: 78
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.022652998345375163
+      Error: 0.0021326132766481443
+    - Sample: HHVBF
+      Yield: 0.0018896450388249527
+      Error: 0.00017565041787730813
+    - Sample: t
+      Yield: 22.361569481168164
+      Error: 1.879516252394765
+    - Sample: Othertop
+      Yield: 3.0637918422005583
+      Error: 0.2580478626068057
+    - Sample: Single-H
+      Yield: 1.6931351318419934
+      Error: 0.16331626493115778
+    - Sample: VV
+      Yield: 32.932876085553566
+      Error: 2.2122456325749695
+    - Sample: VVV
+      Yield: 0.7315185943267825
+      Error: 0.07280741656155461
+    - Sample: V
+      Yield: 94.46287990189889
+      Error: 4.898609569861867
+    - Sample: W+jets
+      Yield: 8.90912619933065
+      Error: 0.7330377375635648
+    - Sample: Z+jets
+      Yield: 710.2827621602206
+      Error: 37.83808325624675
+    - Sample: Total
+      Yield: 874.4622020399254
+      Error: 46.08609947374921
+    - Data: data
+      Yield: 347

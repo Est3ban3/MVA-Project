@@ -1,0 +1,18 @@
+<!--
+This xml file created automatically on: 
+2026-7-28
+-->
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="hh1l2tau_run2_MLP/RooStats/hh1l2tau_run2_MLP" >
+
+
+  <Input>././combine_1l2tau_MLP/RooStats//hh1l2tau_run2_MLP_SR__MLP_RUN2.xml</Input>
+  <Input>././combine_1l2tau_MLP/RooStats//hh1l2tau_run2_MLP_SR__MLP_RUN3.xml</Input>
+
+  <Measurement Name="hh1l2tau_run2_MLP" Lumi="1" LumiRelErr="0.1" ExportOnly="True"  >
+    <POI>mu_XS_hh mu_XS_hh</POI>  
+    <ParamSetting Const="True">Lumi</ParamSetting>
+  </Measurement> 
+
+</Combination>

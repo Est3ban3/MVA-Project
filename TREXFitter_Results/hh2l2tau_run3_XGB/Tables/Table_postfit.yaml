@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.44624624691237774
+      Error: 4.548632063068953
+    - Sample: HHVBF
+      Yield: 0.017986174523592968
+      Error: 0.18347641691762484
+    - Sample: t
+      Yield: 50.26458344573647
+      Error: 2.0297076911835537
+    - Sample: Othertop
+      Yield: 4.431946829922828
+      Error: 0.18228843598472813
+    - Sample: Single-H
+      Yield: 7.406216700989619
+      Error: 0.3112801606384659
+    - Sample: VV
+      Yield: 34.69662958117282
+      Error: 1.344355525061245
+    - Sample: VVV
+      Yield: 1.4787236666373074
+      Error: 0.05774353131170279
+    - Sample: V
+      Yield: 28.458679717516468
+      Error: 1.176278543100718
+    - Sample: W+jets
+      Yield: 5.226634371009084
+      Error: 0.29220497984958876
+    - Sample: Z+jets
+      Yield: 223.61779638719958
+      Error: 9.614781096032965
+    - Sample: Total
+      Yield: 356.04544312162017
+      Error: 15.077948051557952
+    - Data: data
+      Yield: 219
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.025340102264097625
+      Error: 0.0014204950683202812
+    - Sample: HHVBF
+      Yield: 0.001899435488219794
+      Error: 0.00010910264045823236
+    - Sample: t
+      Yield: 48.96285505542433
+      Error: 2.527751574356253
+    - Sample: Othertop
+      Yield: 5.090048633106006
+      Error: 0.24532250337212333
+    - Sample: Single-H
+      Yield: 49.454064165919235
+      Error: 2.4426557076751223
+    - Sample: VV
+      Yield: 46.69903643622033
+      Error: 2.2839080579388447
+    - Sample: VVV
+      Yield: 0.8610655091700558
+      Error: 0.047437347998174575
+    - Sample: V
+      Yield: 204.59938337901994
+      Error: 10.002020791005291
+    - Sample: W+jets
+      Yield: 9.112775471181205
+      Error: 0.5312033100624292
+    - Sample: Z+jets
+      Yield: 1435.1817015621984
+      Error: 67.89950462549014
+    - Sample: Total
+      Yield: 1799.9881697499918
+      Error: 84.32186145138851
+    - Data: data
+      Yield: 900

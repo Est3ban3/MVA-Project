@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.43893309129355
+      Error: 0.03281247709173609
+    - Sample: HHVBF
+      Yield: 0.01773868694250272
+      Error: 0.0010848323588225537
+    - Sample: t
+      Yield: 51.06340576050289
+      Error: 2.9755422348455545
+    - Sample: Othertop
+      Yield: 4.656018097252498
+      Error: 0.33003726550523715
+    - Sample: Single-H
+      Yield: 8.957410081582903
+      Error: 0.5056309905707267
+    - Sample: VV
+      Yield: 35.12625925093226
+      Error: 1.9434672477450161
+    - Sample: VVV
+      Yield: 1.6279317088221787
+      Error: 0.08898866671385773
+    - Sample: V
+      Yield: 24.442972627325545
+      Error: 1.3220198526198714
+    - Sample: W+jets
+      Yield: 2.4124960375172866
+      Error: 0.2250018163967939
+    - Sample: Z+jets
+      Yield: 162.82085367898645
+      Error: 10.389816473727958
+    - Sample: Total
+      Yield: 291.56401902115806
+      Error: 17.57384059356761
+    - Data: data
+      Yield: 189
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.032652451346527125
+      Error: 0.0016580771992140832
+    - Sample: HHVBF
+      Yield: 0.002146890592571333
+      Error: 0.00011066821218486957
+    - Sample: t
+      Yield: 48.16403248130072
+      Error: 2.2865260349533503
+    - Sample: Othertop
+      Yield: 4.865977342162867
+      Error: 0.23125353369506738
+    - Sample: Single-H
+      Yield: 47.902870738290424
+      Error: 2.0439430610352636
+    - Sample: VV
+      Yield: 46.26940657194876
+      Error: 2.0495638175362894
+    - Sample: VVV
+      Yield: 0.7118574579928373
+      Error: 0.033563342126986334
+    - Sample: V
+      Yield: 208.61509033047665
+      Error: 10.171173492462007
+    - Sample: W+jets
+      Yield: 13.876106723517104
+      Error: 0.8612411721609712
+    - Sample: Z+jets
+      Yield: 1495.9786432292135
+      Error: 70.94008946281056
+    - Sample: Total
+      Yield: 1866.418784216842
+      Error: 86.62455369645329
+    - Data: data
+      Yield: 930

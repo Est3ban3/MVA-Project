@@ -1,0 +1,74 @@
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.3693877571067625
+      Error: 3.7246987698948044
+    - Sample: HHVBF
+      Yield: 0.014694518049442183
+      Error: 0.14821420345990913
+    - Sample: t
+      Yield: 24.41720644411401
+      Error: 1.438803739300519
+    - Sample: Othertop
+      Yield: 3.3302910131196217
+      Error: 0.19760870774289538
+    - Sample: Single-H
+      Yield: 2.7152451983519996
+      Error: 0.14648850387391438
+    - Sample: VV
+      Yield: 25.18025441031257
+      Error: 1.4250951569240968
+    - Sample: VVV
+      Yield: 1.4553875457392011
+      Error: 0.08194482956953006
+    - Sample: V
+      Yield: 7.373538586367134
+      Error: 0.4206305666489488
+    - Sample: W+jets
+      Yield: 3.2476345459385207
+      Error: 0.21171908336097786
+    - Sample: Z+jets
+      Yield: 77.63087369511719
+      Error: 4.879859677216489
+    - Sample: Total
+      Yield: 145.73451371421646
+      Error: 9.163498755996619
+    - Data: data
+      Yield: 81
+- Region: HH2
+  Samples:
+    - Sample: HHggF
+      Yield: 0.02994355442561368
+      Error: 0.002037631680552662
+    - Sample: HHVBF
+      Yield: 0.002621746551920761
+      Error: 0.00017232272749502273
+    - Sample: t
+      Yield: 21.12292580612306
+      Error: 1.2765580855334993
+    - Sample: Othertop
+      Yield: 2.7496325457408832
+      Error: 0.1830822478039668
+    - Sample: Single-H
+      Yield: 1.932589523155884
+      Error: 0.12116144942045852
+    - Sample: VV
+      Yield: 32.760092855603574
+      Error: 1.7581766984833402
+    - Sample: VVV
+      Yield: 0.5776244682861651
+      Error: 0.04040740726384731
+    - Sample: V
+      Yield: 96.48573581828161
+      Error: 5.095450719035815
+    - Sample: W+jets
+      Yield: 11.822527847024087
+      Error: 1.0954719500583903
+    - Sample: Z+jets
+      Yield: 721.3544017348805
+      Error: 38.592625007323825
+    - Sample: Total
+      Yield: 888.8380959000733
+      Error: 46.56451110016673
+    - Data: data
+      Yield: 344

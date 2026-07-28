@@ -1,0 +1,74 @@
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.8342067228860249
+      Error: 6.8545708049018605
+    - Sample: HHVBF
+      Yield: 0.02205272067056248
+      Error: 0.18128984813774182
+    - Sample: t
+      Yield: 156.23099212063255
+      Error: 4.263996699934753
+    - Sample: Othertop
+      Yield: 19.199613739209294
+      Error: 0.5157599179315345
+    - Sample: Single-H
+      Yield: 15.434496081548982
+      Error: 0.4233692999062899
+    - Sample: VV
+      Yield: 183.04149555644952
+      Error: 4.996321765163248
+    - Sample: VVV
+      Yield: 0.9775003600372241
+      Error: 0.026628857306791338
+    - Sample: V
+      Yield: 15.448384586621652
+      Error: 0.43025762760054326
+    - Sample: W+jets
+      Yield: 153.7965021026192
+      Error: 4.538530341660348
+    - Sample: Z+jets
+      Yield: 133.97567644716418
+      Error: 3.7781278056956236
+    - Sample: Total
+      Yield: 678.9609204378393
+      Error: 19.00205451728017
+    - Data: data
+      Yield: 586
+- Region: HH1
+  Samples:
+    - Sample: HHggF
+      Yield: 0.0386818453325661
+      Error: 0.0017435765727125418
+    - Sample: HHVBF
+      Yield: 0.0023693217657885153
+      Error: 0.00011295211995913902
+    - Sample: t
+      Yield: 190.88811321863884
+      Error: 8.468076051687762
+    - Sample: Othertop
+      Yield: 24.944389427653782
+      Error: 1.1998965847277425
+    - Sample: Single-H
+      Yield: 8.187381435771291
+      Error: 0.4162686685596191
+    - Sample: VV
+      Yield: 115.32338344191515
+      Error: 5.069948897094465
+    - Sample: VVV
+      Yield: 0.4238873215315203
+      Error: 0.018813066345920445
+    - Sample: V
+      Yield: 54.87812145580853
+      Error: 3.1905897993708776
+    - Sample: W+jets
+      Yield: 1308.8674780208073
+      Error: 99.1242382325008
+    - Sample: Z+jets
+      Yield: 477.99656851928256
+      Error: 30.129990510507493
+    - Sample: Total
+      Yield: 2181.5503740085073
+      Error: 143.07937311320975
+    - Data: data
+      Yield: 1847
