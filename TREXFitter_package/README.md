@@ -28,60 +28,98 @@ paths are relative.
   Unzip next to `ntuples/` on the target machine and run from the package
   root — `NtuplePath` and the MultiFit `ConfigFile:` references resolve
   relative to the working directory, not the config location.
-  - `<channel>_limit_<run>.config` (`<run>` ∈ run2, run3, combined) — one
-    config per channel/track (6 total), each with **two regions per model**
-    (10 total): `SR__<MODEL>_<RUN>` (score ≥ 0.4, `Type: SIGNAL`) and
-    `LowMVA__<MODEL>_<RUN>` (score < 0.4, `Type: VALIDATION`). No
-    `DataType` overrides (per supervisor): both regions use the real data
-    sample; the limit itself stays expected-only via `LimitBlind: True`.
-    Region structure follows the supervisor-guided
-    `1l2tau_limit_run2_evie.config` draft, with its bugs fixed (branch
-    name, run2/run3 data mix-up, LowMVA variable range, tree name).
-  - `<channel>_combine.config` — run2+run3 MultiFit per channel (2 total).
+  - `<channel>_limit_<run>_<MODEL>.config` (`<run>` ∈ run2, run3, combined;
+    `<MODEL>` ∈ XGB, DNN, MLP, GNN, PNN) — **one config per
+    channel/track/model** (30 total), each holding exactly that model's two
+    regions: `SR__<MODEL>_<RUN>` (score ≥ 0.4, `Type: SIGNAL`,
+    `DataType: ASIMOV` — blind) and `LowMVA__<MODEL>_<RUN>` (score < 0.4,
+    `Type: VALIDATION`, real data). Each config has its own `Job:` name
+    (`hh<channel>_<run>_<MODEL>`), so outputs never collide. Region
+    structure follows the supervisor-guided `1l2tau_limit_run2_evie.config`
+    draft, with its bugs fixed (branch name, run2/run3 data mix-up, LowMVA
+    variable range, tree name).
+  - `<channel>_combine_<MODEL>.config` — run2+run3 MultiFit per
+    channel/model (10 total), referencing that model's per-run configs.
+  - `<channel>_limit_<run>.config` — **all-models convenience copies**
+    (6 total): the same regions as the five per-model configs merged into
+    one file (`Job: hh<channel>_<run>`, all SRs `DataType: ASIMOV`). Only
+    valid when **every** trex-fitter step gets `Regions=` restricted to one
+    model's SR+LowMVA pair plus a `Suffix=` — the exact commands are in
+    each file's header. Never run these bare: that is the five-fold
+    double-count that invalidated the 2026-07 HH_RUNS fits.
+  - `run_all.sh` — every fit + combine command in dependency order
+    (per-model configs only; `nwd`, then `fp`, then `l` per job).
 
-## How to run — ONE model per fit
+## How to run
 
-The five models' regions in a config hold the **same events** (one score
-each), so different models must never be fit together — a simultaneous fit
-would count every event five times. Always pass `Regions=` with one model's
-SR + LowMVA pair (plus `Suffix=` to keep the output plots apart):
+**One model per fit is enforced structurally.** The five models score the
+**same events** (one score branch each), so different models must never share
+a likelihood — a simultaneous fit would count every event five times (this
+happened: the 2026-07 HH_RUNS fits ran all five SR regions of the older
+all-in-one configs together, invalidating every μ and limit). Each config now
+contains a single model, so there is nothing to get wrong and no
+`Regions=`/`Suffix=` CLI options are needed:
 
 ```
-trex-fitter nwdfl configs/1l2tau_limit_run2.config "Regions=SR__XGB_RUN2,LowMVA__XGB_RUN2:Suffix=_XGB"
-trex-fitter nwdfl configs/1l2tau_limit_run2.config "Regions=SR__DNN_RUN2,LowMVA__DNN_RUN2:Suffix=_DNN"
-...
+bash configs/run_all.sh          # launch from anywhere; it cd's to the
+                                 # package root itself
 ```
+
+The script finds `ntuples/` for itself (package root, `../ntuples`, or
+`NTUPLE_PATH=/path/to/ntuples bash configs/run_all.sh`, symlinking it into
+place if needed), **preflights all 44 input files**, and stops if any job
+fails to write its `Fits/<job>.txt`. Both guards matter: TRExFitter only
+*warns* on a missing input and then happily fits empty histograms
+(single-bin auto-binning, no fit results), and it exits 0 either way — so
+without them a broken run looks like a successful one for 40 jobs.
+
+**Everything else must be launched from the package root** (the directory
+holding `ntuples/` and `configs/`), not from inside `configs/`:
+`NtuplePath: ./ntuples`, the config paths on the command line, and the
+MultiFit `ConfigFile:` references all resolve against the working
+directory, never against the config's own location.
+
+or individually — the supervisor's steps (`n` ntuples→histograms, `w`
+workspace, `d` prefit plots, `f` fit, `p` postfit plots, `l` limit) in **one
+invocation**:
+
+```
+trex-fitter nwdfpl  configs/1l2tau_limit_run2_XGB.config
+trex-fitter mnwdfpl configs/1l2tau_combine_XGB.config  # after both per-run jobs
+```
+
+The MultiFit uses the same steps with the `m` prefix (supervisor's `mnwd` /
+`mfp` / `ml`, merged into one call). Plain `mwfl` also yields the combined
+limit but skips the combined pre/post-fit plots that `n`/`d`/`p` produce.
+
+**Do not split the steps across separate `trex-fitter` calls in NTUP mode.**
+Running `nwd`, then `fp`, then `l` as three processes makes the fit produce
+no `Fits/<job>.txt`/`.root` (only `n` builds the histograms; a fresh process
+has none loaded), and `p` then dies with
+`ERROR::FitResults::ReadFromTXT: Could not open the file …` plus a cascade of
+`TCanvas::Range` errors. If you do need them split, prefix every later call
+with `h` so it re-reads the cached histograms: `trex-fitter hfp …`,
+`trex-fitter hl …`.
+
+The all-models `<channel>_limit_<run>.config` copies run the *same* fits if
+you prefer fewer files — but only with the `Regions=...:Suffix=...` options
+listed in their headers, applied to every step.
 
 Region names carry the track (`SR__XGB_RUN2` / `_RUN3` / `_COMBINED`).
-
-Run2+Run3 combination: the MultiFit combines whatever the two per-run
-workspaces were **last** built with, so do one model at a time — build both
-runs' workspaces for that model, combine, then move on:
-
-```
-trex-fitter nw  configs/1l2tau_limit_run2.config "Regions=SR__XGB_RUN2,LowMVA__XGB_RUN2:Suffix=_XGB"
-trex-fitter nw  configs/1l2tau_limit_run3.config "Regions=SR__XGB_RUN3,LowMVA__XGB_RUN3:Suffix=_XGB"
-trex-fitter mwfl configs/1l2tau_combine.config
-# record the limit, then repeat the three lines for DNN, MLP, GNN, PNN
-```
-
-Combined-track single fit (independent of the MultiFit; uses the
-`score_*_comb` columns; its data sample lists both runs' files):
-
-```
-trex-fitter nwdfl configs/1l2tau_limit_combined.config "Regions=SR__XGB_COMBINED,LowMVA__XGB_COMBINED:Suffix=_XGB"
-```
+The per-model combines are independent (unique Job/workspace paths per
+model) and just need their two per-run workspaces built first —
+`run_all.sh` already orders this correctly.
 
 The expected 95% CL limit on `mu_XS_hh` per model is the comparison
 deliverable.
 
 ## Two different "combined" things — don't mix them up
 
-- **`<channel>_combine.config`** (MultiFit) statistically combines the
-  *run2 fit* and the *run3 fit* — each run keeps its own run-trained model,
-  and TRExFitter combines the two workspaces. This mirrors the supervisor's
-  original `*_combine.config` and is the headline combination.
-- **`<channel>_limit_combined.config`** is a single fit of the project's
+- **`<channel>_combine_<MODEL>.config`** (MultiFit) statistically combines
+  the *run2 fit* and the *run3 fit* — each run keeps its own run-trained
+  model, and TRExFitter combines the two workspaces. This mirrors the
+  supervisor's original `*_combine.config` and is the headline combination.
+- **`<channel>_limit_combined_<MODEL>.config`** is a single fit of the project's
   *combined training track*: the run2+run3-trained model (`score_*_comb`
   columns) evaluated on the pooled run2+run3 events (each Sample lists both
   runs' files in `NtupleFiles`). PNN uses its single `score_pnn` column
@@ -147,20 +185,29 @@ has 10 MC processes, no data and no fake-tau estimate, so:
   in the background-dominated score range, per model. XGB region yields
   (run2): 1l2tau SR S=0.69/B=428, LowMVA data 855; 2l2tau SR S=0.39/B=160,
   LowMVA data 347.
-- **No `DataType` overrides** (per supervisor): with the DATA sample present,
-  real data enters both regions' plots — including the SR (318/586/78/219
-  data events pass the SR cuts per channel/run). The *limit* remains
-  expected-only (`LimitBlind: True`), but pre/post-fit SR plots will show
-  data. If the analysis is meant to stay SR-blind, that is now a
-  supervisor-level decision, not a config default.
+- **The SR is blind: `DataType: ASIMOV`** (as in the supervisor's HIST-mode
+  template). The fit sees the μ=1 Asimov dataset in the SR, never real data
+  — the fit result is a closure test (μ = 1 ± σ by construction) and the
+  physics numbers are σ(μ) and the expected limit (`LimitBlind: True`).
+  Real data enters only the LowMVA VALIDATION plots. (An earlier package
+  revision dropped `DataType: ASIMOV`; the 2026-07 HH_RUNS fits therefore
+  ran S+B fits on unblinded real data — those μ values are void.)
 - The region `Selection:` includes the full preselection redundantly (the
   ntuples are pre-filtered) as a guard.
 
 ## Caveats
 
-- Real data enters both regions (no `DataType` overrides, per supervisor);
-  the limit stays expected-only via `LimitBlind: True`. See "Regions &
-  blinding" above.
+- Real data enters only the LowMVA VALIDATION region; the SR is
+  `DataType: ASIMOV` and the limit stays expected-only via
+  `LimitBlind: True`. See "Regions & blinding" above.
+- **Known background-model issue (needs supervisor input): raw MC overshoots
+  data** in the LowMVA sideband — data/MC ≈ 0.75–0.85 (1l2tau) and ≈ 0.4–0.6
+  (2l2tau), with Z+jets dominating the 2l2tau excess. The supervisor's full
+  analysis models jet→τ fakes with a data-driven FakeTau estimate that this
+  MC-only package lacks. Expected limits are therefore conservative
+  (backgrounds inflated), and by different amounts per channel. Options:
+  float Z+jets/W+jets NormFactors in a control region, add a fake-rate
+  normalization systematic, or import the fake-factor estimate.
 - MC-stat uses `MCstatConstraint: Poisson` with negative-weight events kept;
   if a merged bin ends up with negative total content TRExFitter will warn —
   switch to `Gauss` or coarsen the binning if it errors.
