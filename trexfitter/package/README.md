@@ -47,8 +47,13 @@ paths are relative.
     model's SR+LowMVA pair plus a `Suffix=` — the exact commands are in
     each file's header. Never run these bare: that is the five-fold
     double-count that invalidated the 2026-07 HH_RUNS fits.
+  - `<channel>_postfit_<run>_<MODEL>_combFit.config` — the per-run config plus
+    one `Suffix: _combFit` line (20 total), used to redraw that run's regions
+    with the *combined* fit result. Driven by `run_postfit_combined.sh`; see
+    "To get region plots drawn with the combined fit" below.
   - `run_all.sh` — every fit + combine command in dependency order
-    (per-model configs only; `nwd`, then `fp`, then `l` per job).
+    (per-model configs only; `nwdfpl` per fit job, then `mwfl` + a bare `m`
+    comparison pass per combination).
 
 ## How to run
 
@@ -84,13 +89,62 @@ workspace, `d` prefit plots, `f` fit, `p` postfit plots, `l` limit) in **one
 invocation**:
 
 ```
-trex-fitter nwdfpl  configs/1l2tau_limit_run2_XGB.config
-trex-fitter mnwdfpl configs/1l2tau_combine_XGB.config  # after both per-run jobs
+trex-fitter nwdfpl configs/1l2tau_limit_run2_XGB.config
+trex-fitter mwfl   configs/1l2tau_combine_XGB.config  # after both per-run jobs
+trex-fitter m      configs/1l2tau_combine_XGB.config  # comparison figures, last
 ```
 
-The MultiFit uses the same steps with the `m` prefix (supervisor's `mnwd` /
-`mfp` / `ml`, merged into one call). Plain `mwfl` also yields the combined
-limit but skips the combined pre/post-fit plots that `n`/`d`/`p` produce.
+**The MultiFit does not take `n`/`d`/`p`.** It combines the two per-run
+*workspaces* and never opens an ntuple, so there is nothing to histogram:
+`mwfl` and `mnwdfpl` produce byte-for-byte the same output, and neither
+writes `Histograms/`, `Plots/` or `Tables/` into the `combine_*` directory.
+The 2026-07-28 run used `mnwdfpl` and came back with a combined fit, a
+combined limit and one plot (the error breakdown) — that was TRExFitter
+working as designed, not a failed step.
+
+The MultiFit's own figures are the `Compare*` ones, drawn by the **bare `m`**
+pass, which needs the fit *and* limit results of both referenced jobs to
+already exist on disk — hence last. `Compare: TRUE`, `ComparePOI: TRUE`,
+`CompareLimits: TRUE` and `PlotCombCorrMatrix: TRUE` are set in the generated
+combine configs. (`ComparePulls` is deliberately off: with no systematics the
+only NPs are per-run MC-stat gammas, so the two fits share none.)
+
+For per-region data/MC distributions, read them from the per-run job
+directories (`hh<channel>_run{2,3}_<MODEL>/Plots/`) — the combination adds no
+events, so there is no new distribution to draw.
+
+**To get region plots drawn with the combined fit**, run
+`bash run_postfit_combined.sh` after `configs/run_all.sh`. TRExFitter has no
+`mp` step, and an ordinary job has no option to read a fit result from another
+directory — `FitResultsFile` exists only in the MultiFit `Fit` block. What an
+ordinary job does have is `Suffix`, which is *"added to file names of plots,
+workspace, fit results etc."*, so the `p` step reads
+`<Job>/Fits/<Job><Suffix>.txt`. The script therefore stages each combination's
+fit result into both of its per-run jobs as `<Job>_combFit.txt` and runs
+`trex-fitter hp` on the 20 `<channel>_postfit_<run>_<MODEL>_combFit.config`
+files — each byte-identical to the corresponding fit config apart from one
+added `Suffix: _combFit` line, which is what lets `h` find the histograms the
+original `n` step already wrote. Nothing is refitted and no ntuple is read;
+output is `Plots/<region>_postFit_combFit.{png,pdf}` **alongside** the
+single-run post-fit plots, not replacing them.
+
+*Not yet exercised on lxplus* — there is no TRExFitter on the local box. If
+`hp` complains about missing histograms, the suffix is reaching the histogram
+file names too (that should be `SaveSuffix`'s job, not `Suffix`'s); the fix is
+to run `nhp` instead of `hp`, at the cost of rebuilding the histograms.
+
+**A post-fit SR plot here is the pre-fit plot with a different error band.**
+The SR is `DataType: ASIMOV` at μ=1, so the dataset *is* the prediction and
+the best fit is exactly it: every fitted NP in all 40 jobs comes back 1.000
+(largest deviation 4e-6, checked). The stack cannot move — that is the
+closure test working. What the combination changes is the band: in the
+highest-score bin it goes 35.8% → 25.2% (1ℓ2τ XGB Run 2), 55.6% → 41.5%
+(2ℓ2τ XGB Run 2), because σ(μ) tightens.
+
+Repo-side, `.venv/bin/python Plot_TRExFitter_Results.py` draws the limit
+comparison, model comparison, error breakdown and the SR/MVA score
+distributions *with the combined fit's band* — all from the fit/limit outputs
+already on disk, no lxplus needed.
 
 **Do not split the steps across separate `trex-fitter` calls in NTUP mode.**
 Running `nwd`, then `fp`, then `l` as three processes makes the fit produce
@@ -126,6 +180,24 @@ deliverable.
   (parameterized model, same network everywhere). This answers "how good is
   the combined-track model", matching the repo's three-track
   (run2 / run3 / combined) comparison.
+
+**The combination must go through the MultiFit** (supervisor). Run 2 is at
+13 TeV and Run 3 at 13.6 TeV, so the signal cross sections differ; merging the
+two runs into one likelihood by hand is not equivalent, and results built that
+way are wrong. The MultiFit combines the two per-run *workspaces*, each
+carrying its own energy, which is why `<channel>_combine_<MODEL>.config` is
+the headline combination and the only one to quote.
+
+⚠️ **That objection applies to `<channel>_limit_combined_<MODEL>.config` as
+written**: it pools both runs' events into a *single* region with one μ and
+one set of MC-stat gammas across mixed 13 / 13.6 TeV events — exactly the
+construction the supervisor rejected. It is fine as a *classifier* question
+(is the run2+run3-trained model better?), but its μ and limit should not be
+quoted as a combination result. To evaluate the combined-trained model
+properly, score each run separately with `score_*_comb` and combine those two
+fits with a MultiFit, as the per-run models are. Not done here — flagging it.
+The repo-side figure `StatComb_vs_CombinedTraining.png` compares against this
+track and carries the same caveat.
 
 ## What goes into the fit
 
