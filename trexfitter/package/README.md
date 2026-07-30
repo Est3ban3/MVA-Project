@@ -17,9 +17,11 @@ paths are relative.
   bookkeeping. All 130 original branches are kept, so further regions
   (CRs/VRs with physics selections within the preselected phase space) can
   be added to the configs later. Scores were scattered back from the
-  verified OOF exports with row-alignment asserted per chunk. The configs'
-  `Selection:` is redundant on these filtered files — it is kept as a guard
-  in case they are ever pointed at unfiltered ntuples.
+  verified OOF exports with row-alignment asserted per chunk. The
+  preselection half of the configs' `Selection:` is redundant on these
+  filtered files — it is kept as a guard in case they are ever pointed at
+  unfiltered ntuples; the channel physics cuts in the other half are applied
+  here and nowhere else.
 - `ntuples/Data/data_<channel>_<run>.root` — REAL DATA, scored with every
   model by `Score_New_Data.py` (same tree/schema as the MC ntuples;
   preselected; all weights ≡ 1).
@@ -201,10 +203,18 @@ track and carries the same caveat.
 
 ## What goes into the fit
 
-- **Events**: everything passing the MVA preselection (`Selection:` in each
-  config — `n_b_jet==0 && n_jet>=2` for 1l2tau,
-  `n_b_jet==0 && l1_charge*l2_charge<0 && mZ_cut>0` for 2l2tau), scored
-  out-of-fold (each event scored by the model that never trained on it).
+- **Events**: everything passing the MVA preselection *and* the channel's
+  physics cuts (together the `Selection:` in each config), scored out-of-fold
+  (each event scored by the model that never trained on it):
+  - 1l2tau: `n_b_jet==0 && n_jet>=2`
+    ` && fabs(dR_t1t2)<=2.0 && pair_isOStaus && pass_SLT`
+  - 2l2tau: `n_b_jet==0 && l1_charge*l2_charge<0 && mZ_cut>0`
+    ` && fabs(dR_t1t2)<=2.0 && pair_isOStaus && low_mass_cut && (pass_SLT || pass_DLT)`
+
+  The **preselection alone** is what the copied ntuples contain (it is applied
+  when they are built, and the models were trained on exactly that sample);
+  the physics cuts are applied only here, at fit time. See "Regions &
+  blinding" for what they cost in yield.
 - **Weights**: `MCweight: w_phys` — signed physical weights
   `w_phys = weight × weights`; negative weights kept (the repo's evaluation
   convention). No extra lumi scaling: the weights already include it
@@ -214,9 +224,16 @@ track and carries the same caveat.
 - **Variables are the plain score branches** (`Variable: "score_gnn",8,0,1`,
   per supervisor). A score of exactly 1.0 falls in the overflow bin; checked
   — exactly 1 event repo-wide (one `score_mlp`), negligible.
-- Yields (from the copied ntuples): 1l2tau run2 S=1.824 / B=11467.3,
-  run3 S=2.081 / B=19366.9; 2l2tau run2 S=0.417 / B=1034.2,
-  run3 S=0.491 / B=2126.1. Combined = sums of the two runs.
+- Yields, preselection only (= the copied ntuples' full content): 1l2tau run2
+  S=1.824 / B=11467.3, run3 S=2.081 / B=19366.9; 2l2tau run2 S=0.417 /
+  B=1034.2, run3 S=0.491 / B=2126.1. Combined = sums of the two runs.
+- Yields after the full `Selection:` (what the fit actually sees, both score
+  regions summed): 1l2tau run2 S=0.725 / B=1523.4, run3 S=0.897 / B=2859.6;
+  2l2tau run2 S=0.241 / B=99.0, run3 S=0.296 / B=285.0. The physics cuts are
+  a hard cut — they remove 57-60% of the signal and 85-87% of the background
+  in 1l2tau, 40-42% / 87-90% in 2l2tau — but S/√B rises in all four tracks
+  (1l2tau run2 0.0170→0.0186, run3 0.0150→0.0168; 2l2tau run2
+  0.0130→0.0242, run3 0.0107→0.0175).
 
 ## Deviations from the supervisor's original configs (TREXFitter_configs/)
 
@@ -226,7 +243,8 @@ has 10 MC processes, no data and no fake-tau estimate, so:
 
 1. **NTUP mode against the original ntuples with score columns added** (per
    the supervisor's instruction), with `Variable:` = the model score,
-   `MCweight: w_phys` and `Selection:` = the MVA preselection.
+   `MCweight: w_phys` and `Selection:` = the MVA preselection + the channel's
+   physics cuts.
 2. **Sample list remapped** to our processes: SIGNAL = `HH_ggF` + `HH_VBF`
    (both scaled by `mu_XS_hh`; the original had ggF kl=1 only); BACKGROUND =
    `ttbar`, `tops`, `SingleH`, `VV` (diboson), `VVV`, `Vgamma`, `Wjets`,
@@ -247,16 +265,28 @@ has 10 MC processes, no data and no fake-tau estimate, so:
 
 ## Regions & blinding
 
-- **SR** (`score >= 0.4`, `Type: SIGNAL`): fit region. 1l2tau additionally
-  applies the draft's physics cuts
-  (`fabs(dR_t1t2)<=2.0 && pair_isOStaus && pass_SLT`); **no 2l2tau
-  equivalents were specified in the draft, so 2l2tau has only the
-  preselection + score split** — tell the supervisor if he wants matching
-  2l2tau cuts.
+- Both regions apply the channel's physics cuts on top of the preselection:
+  - 1l2tau `fabs(dR_t1t2)<=2.0 && pair_isOStaus && pass_SLT`
+  - 2l2tau `fabs(dR_t1t2)<=2.0 && pair_isOStaus && low_mass_cut && (pass_SLT || pass_DLT)`
+
+  `pair_isOStaus` = the two taus have opposite charges. The 2l2tau set was
+  supplied on 2026-07-30, after the first revision of this package shipped
+  with 2l2tau on the preselection alone — **any 2l2tau result predating that
+  is superseded.** Two notes on the expansion:
+  - **`passTriggers` is not a branch.** The 2l2tau ntuples carry `pass_SLT`
+    and `pass_DLT` only, so it is expanded to their OR. (1l2tau carries five
+    trigger flags and names `pass_SLT` explicitly, so "the triggers" reads as
+    the channel-wide OR rather than one named path.) `pass_SLT` alone would
+    give run2 S=0.226/B=30.6 instead of S=0.235/B=32.4 in the XGB SR — a ~4%
+    signal difference, so it is worth confirming with the supervisor.
+  - **`low_mass_cut` is very nearly a no-op** on these samples: identically 1
+    in every process and in data, bar a handful of diboson/Zjets events. Kept
+    because it is part of the stated selection.
+- **SR** (`score >= 0.4`, `Type: SIGNAL`): fit region.
 - **LowMVA** (`score < 0.4`, `Type: VALIDATION`): data-vs-MC modelling check
   in the background-dominated score range, per model. XGB region yields
-  (run2): 1l2tau SR S=0.69/B=428, LowMVA data 855; 2l2tau SR S=0.39/B=160,
-  LowMVA data 347.
+  (run2): 1l2tau SR S=0.69/B=428, LowMVA data 855; 2l2tau SR S=0.23/B=32,
+  LowMVA data 70.
 - **The SR is blind: `DataType: ASIMOV`** (as in the supervisor's HIST-mode
   template). The fit sees the μ=1 Asimov dataset in the SR, never real data
   — the fit result is a closure test (μ = 1 ± σ by construction) and the
@@ -264,8 +294,10 @@ has 10 MC processes, no data and no fake-tau estimate, so:
   Real data enters only the LowMVA VALIDATION plots. (An earlier package
   revision dropped `DataType: ASIMOV`; the 2026-07 HH_RUNS fits therefore
   ran S+B fits on unblinded real data — those μ values are void.)
-- The region `Selection:` includes the full preselection redundantly (the
-  ntuples are pre-filtered) as a guard.
+- The region `Selection:` repeats the preselection redundantly (the ntuples
+  are already filtered on it) as a guard; the physics cuts above are *not*
+  redundant — the ntuples do not apply them, so the `Selection:` is the only
+  thing enforcing them.
 
 ## Caveats
 

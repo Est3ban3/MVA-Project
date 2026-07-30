@@ -174,14 +174,28 @@ run_job configs/2l2tau_limit_combined_DNN.config hh2l2tau_combined_DNN
 run_job configs/2l2tau_limit_combined_MLP.config hh2l2tau_combined_MLP
 run_job configs/2l2tau_limit_combined_GNN.config hh2l2tau_combined_GNN
 run_job configs/2l2tau_limit_combined_PNN.config hh2l2tau_combined_PNN
-# run2+run3 statistical combinations (need the per-run workspaces above)
-trex-fitter mnwdfpl configs/1l2tau_combine_XGB.config
-trex-fitter mnwdfpl configs/1l2tau_combine_DNN.config
-trex-fitter mnwdfpl configs/1l2tau_combine_MLP.config
-trex-fitter mnwdfpl configs/1l2tau_combine_GNN.config
-trex-fitter mnwdfpl configs/1l2tau_combine_PNN.config
-trex-fitter mnwdfpl configs/2l2tau_combine_XGB.config
-trex-fitter mnwdfpl configs/2l2tau_combine_DNN.config
-trex-fitter mnwdfpl configs/2l2tau_combine_MLP.config
-trex-fitter mnwdfpl configs/2l2tau_combine_GNN.config
-trex-fitter mnwdfpl configs/2l2tau_combine_PNN.config
+# run2+run3 statistical combinations (need the per-run workspaces above).
+# MultiFit combines workspaces, not ntuples: n/d/p are no-ops in m mode,
+# so there are no combined Histograms/Plots/Tables to ask for. The bare
+# `m` pass draws the Compare* figures and needs the fit AND limit of both
+# referenced jobs to exist already.
+trex-fitter mwfl configs/1l2tau_combine_XGB.config
+trex-fitter m    configs/1l2tau_combine_XGB.config
+trex-fitter mwfl configs/1l2tau_combine_DNN.config
+trex-fitter m    configs/1l2tau_combine_DNN.config
+trex-fitter mwfl configs/1l2tau_combine_MLP.config
+trex-fitter m    configs/1l2tau_combine_MLP.config
+trex-fitter mwfl configs/1l2tau_combine_GNN.config
+trex-fitter m    configs/1l2tau_combine_GNN.config
+trex-fitter mwfl configs/1l2tau_combine_PNN.config
+trex-fitter m    configs/1l2tau_combine_PNN.config
+trex-fitter mwfl configs/2l2tau_combine_XGB.config
+trex-fitter m    configs/2l2tau_combine_XGB.config
+trex-fitter mwfl configs/2l2tau_combine_DNN.config
+trex-fitter m    configs/2l2tau_combine_DNN.config
+trex-fitter mwfl configs/2l2tau_combine_MLP.config
+trex-fitter m    configs/2l2tau_combine_MLP.config
+trex-fitter mwfl configs/2l2tau_combine_GNN.config
+trex-fitter m    configs/2l2tau_combine_GNN.config
+trex-fitter mwfl configs/2l2tau_combine_PNN.config
+trex-fitter m    configs/2l2tau_combine_PNN.config

@@ -114,12 +114,23 @@ PRESELECTION_TTF = {
 # LowMVA = score < cut (VALIDATION region, real data shown there).
 SCORE_CUT = 0.4
 
-# Channel-specific physics cuts on top of the preselection, from the same
-# draft (1l2tau only; no 2l2tau equivalents were specified — flagged in the
-# README rather than invented here).
+# Channel-specific physics cuts on top of the preselection, as specified by
+# the supervisor. `pair_isOStaus` = the two taus have opposite charges.
+#
+# 2l2tau's was supplied later (2026-07-30) as
+# `fabs(dR_t1t2)<=2.0 && pair_isOStaus && low_mass_cut && passTriggers`.
+# There is no `passTriggers` branch — the only trigger flags in the 2l2tau
+# ntuples are `pass_SLT` and `pass_DLT` — so it is expanded here to their OR
+# (user-confirmed), matching the fact that 1l2tau, which carries five trigger
+# flags, names `pass_SLT` explicitly instead of asking for "the triggers".
+#
+# `low_mass_cut` is ~a no-op on the samples we have (identically 1 in every
+# process except a handful of diboson/Zjets events) but is kept because it is
+# part of the stated selection and costs nothing.
 EXTRA_CUTS = {
     "1l2tau": " && fabs(dR_t1t2)<=2.0 && pair_isOStaus && pass_SLT",
-    "2l2tau": "",
+    "2l2tau": " && fabs(dR_t1t2)<=2.0 && pair_isOStaus && low_mass_cut"
+    " && (pass_SLT || pass_DLT)",
 }
 
 DATA_SCORED = REPO / "new_data_scored"
